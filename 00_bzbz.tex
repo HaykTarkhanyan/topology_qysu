@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+\begin{tikzpicture}
+
+  % Define circle center and radius
+  \coordinate (O) at (0,0);
+  \def\r{2}
+
+  % Define angles for the 4 points (approx 45°, 135°, 225°, 315°)
+  \foreach \angle in {45, 135, 225, 315} {
+    % Compute point on circle
+    \coordinate (P) at ({\r*cos(\angle)}, {\r*sin(\angle)});
+    % Draw tangent at that point (perpendicular to radius)
+    \draw[thick] ($(P)!-1!(O)$) -- ($(P)!1!(O)$);
+    % Draw the point
+    \filldraw[fill=gray] (P) circle (2pt);
+  }
+
+  % Draw the circle and center
+  \draw[thick] (O) circle (\r);
+  \fill (O) circle (2pt);
+
+  % Rightmost point (at 315°)
+  \coordinate (PRight) at ({\r*cos(315)}, {\r*sin(315)});
+  % Label s at the point
+  \node[anchor=west] at ($(PRight)+(0.1,0)$) {$s$};
+  % Label l_s slightly above the tangent
+  \node[anchor=south west] at ($(PRight)+(0.2,0.6)$) {$l_s$};
+
+\end{tikzpicture}
+\end{document}
