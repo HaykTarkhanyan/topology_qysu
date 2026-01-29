@@ -1,0 +1,18 @@
+\begin{center}
+\begin{tikzpicture}
+    \filldraw[dashed, thick, pattern=vertical lines, pattern color=gray] (0,0) -- (0,2) -- (3,2) -- (3,0) -- cycle;
+    \draw[dashed, thick] (1,1.2) circle (0.6);
+    \fill (1,1.2) circle (2.5pt);
+    \draw (1,1.2) -- ($ (1,1.2) + (0.8*180:0.6) $);
+    \node[below] at (1,1.2) {$x$};
+    \node[above] at (0.9,1.3) {$r$};
+
+    \coordinate (center) at (7,1);
+    \coordinate (reccenter) at (7.5,0.5);
+    \def\radius{1.5}
+    \filldraw[dashed, thick, pattern=vertical lines, pattern color=gray] (center) circle (\radius);
+    \fill (reccenter) circle (2.5pt);
+    \node[right] at (reccenter) {$y$};
+    \draw[dashed, thick] ($ (reccenter)-(0.5,0.3) $) -- ($ (reccenter)-(-0.5,0.3) $) -- ($ (reccenter)-(-0.5,-0.3) $) -- ($ (reccenter)-(0.5,-0.3) $) -- cycle;
+\end{tikzpicture}
+\end{center}

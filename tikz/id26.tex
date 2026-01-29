@@ -1,0 +1,31 @@
+\begin{center}
+\begin{tikzpicture}[lablum/.style={name=img-#1},
+marr/.style={line width=1mm,-latex}]
+    \node[lablum=1] at (-3,0) {
+    \begin{tikzpicture}
+        \draw[thick, pattern=vertical lines, pattern color=gray] (0,0) rectangle (3,2);
+        \node[above left] (b) at (0,2) {$A$};
+        \node[below left] (a) at (0,0) {$D$};
+        \node[above right] (c) at (3,2) {$B$};
+        \node[below right] (d) at (3,0) {$C$};
+        \draw[thick] (0,0) -- (0,2);
+        \draw[thick] (0,0) -- (3,0);
+        \draw[thick] (0,2) -- (3,2);
+        \draw[thick] (3,0) -- (3,2);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,0) -- (0,1);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,0) -- (1.5,0);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,2) -- (1.5,2);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,0) -- (3,1);
+    \end{tikzpicture}
+    } ;
+    
+    \node[lablum=2] at (2.5,0) {\includegraphics[width=4.5cm]{images/id26_1.jpg}} ;
+    \node[lablum=3] at (8,0) {\includegraphics[width=4.5cm]{images/id26_2.jpg}} ;
+    \draw[thick, ->] (img-1) -- (img-2);
+    \draw[thick, ->] (img-2) -- (img-3);
+    \node at (1,0.1) {$A$};
+    \node at (1,-0.5) {$D$};
+    \node at (4.5,0.25) {$B$};
+    \node at (4.5,-0.25) {$C$};
+\end{tikzpicture}
+\end{center}

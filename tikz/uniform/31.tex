@@ -1,0 +1,17 @@
+\begin{center}
+\begin{tikzpicture}
+    \filldraw[dashed, thick, pattern=vertical lines, pattern color=gray] (0,0) -- (0,2) -- (3,2) -- (3,0) -- cycle;
+    \node[below] at (1.5,0) {$(a,b)$};
+    \node[right] at (3,1) {$(c,d)$};
+    \node at (1.5,1) {$(a,b)\times(c,d)$};
+
+    \coordinate (center) at (7,1);
+    \def\radius{1.5}
+    \filldraw [dashed, thick, pattern=vertical lines, pattern color=gray] (center) circle (\radius);
+    \fill (center) circle (2.5pt);
+    \node[below] at (center) {$x$};
+    \draw (center) -- ($ (center) + (0.2*180:\radius) $);
+    \node[above left] at ($ (center) + (0.2*180:0.5*\radius) $) {$r$};
+    \node[right] at ($ (center) + (\radius,0) $) {$\mathcal{D}(x,r)$}; 
+\end{tikzpicture}
+\end{center}

@@ -1,0 +1,412 @@
+\documentclass[12pt]{extarticle}
+
+\usepackage{subfiles}
+\usepackage{import}
+
+% Font-եր
+\usepackage{fontspec}
+\setmainfont{CMUSerif}[
+    Path=./fonts/,
+    Scale=1,
+    Extension = .ttf,
+    UprightFont=*-Roman,
+    BoldFont=*-Bold,
+    ItalicFont=*-Italic,
+    % BoldItalicFont=*Z
+    ]
+
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={155mm,257mm},
+ left=25mm,
+ top=20mm,
+ }
+
+% էջի կառուցվածք
+%\usepackage[a5paper,left=1.5cm,right=1.75cm,top=1cm,bottom=2cm,bindingoffset=0cm]{geometry}
+%\usepackage[a5paper, textwidth=5in, textheight=7in]{geometry}
+
+% Վերնագրերը մեջտեղից
+% \usepackage[center]{titlesec}
+% \titleformat
+% {\chapter} % command
+% [display] % shape
+% {\bfseries\small\itshape}
+% {} % label
+% {} % sep
+% {} % before-code
+% [] % after-code
+\usepackage{titlesec}
+\titleformat
+{\section} % command
+[display] % shape
+{\center \bfseries \large} % format
+{\center Թեմա \thesection} % label
+%{\center Թեմա. ի՞նչ է տոպոլոգիան} % label
+{0.5ex}{} % sep
+
+% \usepackage{titlesec}
+% \titleformat
+% {\section} % command
+% [] % shape
+% {\bfseries \large} % format
+% {\center Թեմա \thesection} % label
+% {1cm}{} % sep
+
+\titleformat{\subsection}[block]{\large\bfseries\filcenter}{}{1em}{}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\usepackage{amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{amsmath}
+\usepackage{ stmaryrd } % mapsfrom <-|
+\usepackage{upgreek}
+%\usepackage{icomma} % "խելացի" ստորակե, $0,2$ --- թիվ, $0, 2$ --- թվարկում
+\usepackage{mathrsfs} % Սիրուն տառատեսակ
+\usepackage{nicefrac}
+
+% գույներ, գծագրեր
+\usepackage{tikz}
+\usepackage{tikz-cd}
+\usepackage{tikz-layers}
+\usetikzlibrary{quotes,angles}
+\usetikzlibrary{positioning}
+
+\usepackage{graphicx,calc}
+\newlength\myheight
+\newlength\mydepth
+\settototalheight\myheight{Xygp}
+\settodepth\mydepth{Xygp}
+\setlength\fboxsep{0pt}
+\newcommand*\inlinegraphics[1]{%
+  \settototalheight\myheight{Xygp}%
+  \settodepth\mydepth{Xygp}%
+  \raisebox{-\mydepth}{{#1}}%
+}
+
+\usepackage{caption}
+\usepackage{subcaption}
+
+\usepackage{xcolor}
+\usepackage{relsize}  % mathsmaller
+
+% հիպերհղում
+\usepackage[hidelinks, colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage{faktor}
+\usepackage{multicol}
+\usepackage{xparse}
+
+\makeatletter
+\def\thmhead@plain#1#2#3{%
+  \thmname{#1}\thmnumber{\@ifnotempty{#1}{ }\@upn{#2}}%
+  \thmnote{ {\the\thm@notefont#3}}}
+\let\thmhead\thmhead@plain
+\makeatother
+
+\newtheoremstyle{main_theorem_style}% name of the style to be used
+{}% measure of space to leave above the theorem. E.g.: 3pt
+{}% measure of space to leave below the theorem. E.g.: 3pt
+{}% name of font to use in the body of the theorem
+{18pt} %measure of space to indent
+{\bfseries}% name of head font
+{:}% punctuation between head and body
+{ }% space after theorem head; " " = normal interword space
+{}
+
+\theoremstyle{main_theorem_style}
+\newtheorem{example}{Օրինակ}
+\counterwithin*{example}{section}
+\newtheorem{examples}{Օրինակներ}
+\newtheorem{orinakner}{Օրինակներ}
+\newtheorem*{nexamples}{Օրինակներ}
+\newtheorem*{nexample}{Օրինակ}
+
+\newtheorem{question}{Հարց}
+\newtheorem*{nquestion}{Հարց}
+\newtheorem{theorem}{Թեորեմ}
+\newtheorem*{ntheorem}{Թեորեմ}
+\counterwithin*{theorem}{section}
+\newtheorem{hatkutyun}{Հատկություն}
+\counterwithin*{hatkutyun}{section}
+
+\newtheorem*{hetevanq1}{Հետևանքներ թեորեմ 1-ից}
+\newtheorem*{hetevanq1_sa}{Հետևանք թեորեմ 1-ից}
+\newtheorem*{hetevanq2_sa}{Հետևանք թեորեմ 2-ից}
+\newtheorem*{hetevanq3_sa}{Հետևանք թեորեմ 3-ից}
+\newtheorem*{hetevanq4_sa}{Հետևանք թեորեմ 4-ից}
+\newtheorem*{hetevanq5_sa}{Հետևանք թեորեմ 5-ից}
+
+\newtheorem*{hetevanq2}{Հետևանքներ թեորեմ 2-ից}
+\newtheorem*{hetevanq3}{Հետևանքներ թեորեմ 3-ից}
+\newtheorem*{hetevanq4}{Հետևանքներ թեորեմ 4-ից}
+\newtheorem*{hetevanq5}{Հետևանքներ թեորեմ 5-ից}
+\newtheorem*{hetevanq6}{Հետևանքներ թեորեմ 6-ից}
+\newtheorem*{hetevanq7}{Հետևանք թեորեմ 7-ից}
+\newtheorem*{hetevanqlind}{Հետևանք (Լինդելյոֆի) թեորեմից}
+\newtheorem*{hetevanqax}{Հետևանք աքսիոմներից}
+\newtheorem*{separabelex}{Սեպարաբել տարածությունների օրինակներ}
+\newtheorem*{definition}{Սահմանում}
+\newtheorem*{note}{Դիտողություն}
+\newtheorem*{lemma}{Լեմմա}
+\newtheorem*{hetevanq}{Հետևանք}
+\newtheorem{hetevanq_counter}{Հետևանք}
+
+
+\usepackage{setspace}
+
+\renewcommand\qedsymbol{$\blacksquare$}
+\renewcommand*{\proofname}{\hspace{18pt}\textbf{Ապացուցում:}}
+
+\newtheoremstyle{theoremdd}% name of the style to be used
+{}% measure of space to leave above the theorem. E.g.: 3pt
+{}% measure of space to leave below the theorem. E.g.: 3pt
+{}% name of font to use in the body of the theorem
+{18pt} %measure of space to indent
+{\bfseries}% name of head font
+{}% punctuation between head and body
+{ }% space after theorem head; " " = normal interword space
+{\thmname{#1}.}
+
+\theoremstyle{theoremdd}
+
+
+%\newtheorem{example}{Օրինակ}[section]
+%\renewcommand{\theexample}{\arabic{example}}
+%\newenvironment{example} % this is the environment name for the input
+% {\renewcommand{\qedsymbol}{$\triangle$}%
+% %{\renewcommand{\qedsymbol}{$\blacksquare$}%
+% %{\renewcommand{\qedsymbol}{$\qedhere$}%
+% \pushQED{\qed}\begin{examplex}}
+% {\popQED\end{examplex}}
+
+% \newenvironment{example}
+%   {\pushQED{\qed}\renewcommand{\qedsymbol}{$\triangle$}\examplex}
+%   {\popQED\endexamplex}
+% \newcommand{\orinakiverj}
+% {\par \vspace{-1.7\baselineskip} 
+% \qedhere}
+
+
+\newtheorem*{hint}{Ցուցում}
+
+\newtheorem*{equivdefinition}{Համարժեք սահմանում}
+
+
+
+\newtheoremstyle{theoremddd}% name of the style to be used
+{}% measure of space to leave above the theorem. E.g.: 3pt
+{}% measure of space to leave below the theorem. E.g.: 3pt
+{}% name of font to use in the body of the theorem
+{18pt} %measure of space to indent
+{\bfseries}% name of head font
+{:}% punctuation between head and body
+{ }% space after theorem head; " " = normal interword space
+{\thmname{#1}.}
+
+\theoremstyle{theoremddd}
+ 
+ 
+\usepackage[inline]{enumitem}
+
+% Սահմանումներ
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\sh}{sh}
+\DeclareMathOperator{\ctg}{ctg}
+\DeclareMathOperator{\arctg}{arctg}
+\DeclareMathOperator{\arcctg}{arcctg}
+\DeclareMathOperator{\sinhyp}{sh}
+\DeclareMathOperator{\coshyp}{ch}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Ens}{Ens}
+\DeclareMathOperator{\inter}{int}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+
+\renewcommand{\d}{\mathrm{d}}
+
+\let\ForAll\forall
+\renewcommand{\forall}{\ForAll\,}
+\let\Exists\exists
+\renewcommand{\exists}{\Exists\,}
+
+\newcommand{\diff}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\cl}{cl}
+\usepackage{dsfont}
+\DeclareMathOperator{\nuynakan}{\mathds{1}}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+
+% Հավասարացնել հավասարումները ինչ-որ ձև
+\newcommand{\migic}[1]{\makebox[25em][l]{#1}}
+\newcommand{\alright}[1]{\makebox[15em][l]{#1}}
+
+
+\newcommand\lagrangeprime[1]{^{%
+\ifcase#1 \or\prime\or\prime\prime\or\prime\prime\prime\else\mathrm{\romannumeral #1}\fi}}
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\newcommand*\mathbold[1]{\pdfliteral direct{2 Tr 0.25 w}#1\pdfliteral direct{0 Tr 0 w}} 
+% \usepackage{titlesec}
+% \titleformat{\subsection}
+%   {\bfseries\scshape\Large}{\textsection \thesubsection}{1em}{}
+  
+\usepackage[normalem]{ulem} % [normalem] prevents the package from changing the default behavior of `\emph` to underline.
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+
+\usepackage{indentfirst}
+
+\makeatletter
+\newenvironment{sqcases}{%
+  \matrix@check\sqcases\env@sqcases
+}{%
+  \endarray\right.%
+}
+\def\env@sqcases{%
+  \let\@ifnextchar\new@ifnextchar
+  \left\lbrack
+  \def\arraystretch{1.2}%
+  \array{@{}l@{\quad}l@{}}%
+}
+\makeatother
+
+\usepackage[sorting=nty,natbib,style=numeric,defernumbers]{biblatex}
+%\usepackage{cite}
+%\bibliographystyle{unsrt}
+\addbibresource{grqer.bib}
+
+\newtheoremstyle{theorem_attribute}% name of the style to be used
+{}% measure of space to leave above the theorem. E.g.: 3pt
+{0pt}% measure of space to leave below the theorem. E.g.: 3pt
+{}% name of font to use in the body of the theorem
+{18pt} %measure of space to indent
+{\bfseries}% name of head font
+{:}% punctuation between head and body
+{ }% space after theorem head; " " = normal interword space
+{}
+
+\newtheoremstyle{theorem_statement}% name of the style to be used
+{}% measure of space to leave above the theorem. E.g.: 3pt
+{0pt}% measure of space to leave below the theorem. E.g.: 3pt
+{}% name of font to use in the body of the theorem
+{18pt} %measure of space to indent
+{\bfseries}% name of head font
+{.}% punctuation between head and body
+{ }% space after theorem head; " " = normal interword space
+{}
+
+\theoremstyle{theorem_statement}
+\newtheorem{statement}{Պնդում}
+\newtheorem{hatkutun_counter}{Հատկություն}
+\counterwithin*{theorem}{section}
+
+\theoremstyle{theorem_statement}
+\newtheorem{attribute}{Հ}
+\counterwithin*{theorem}{section}
+
+
+\makeatletter
+\let\save@mathaccent\mathaccent
+\newcommand*\if@single[3]{%
+  \setbox0\hbox{${\mathaccent"0362{#1}}^H$}%
+  \setbox2\hbox{${\mathaccent"0362{\kern0pt#1}}^H$}%
+  \ifdim\ht0=\ht2 #3\else #2\fi
+  }
+%The bar will be moved to the right by a half of \macc@kerna, which is computed by amsmath:
+\newcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+%If there's a superscript following the bar, then no negative kern may follow the bar;
+%an additional {} makes sure that the superscript is high enough in this case:
+\newcommand*\widebar[1]{\@ifnextchar^{{\wide@bar{#1}{0}}}{\wide@bar{#1}{1}}}
+%Use a separate algorithm for single symbols:
+\newcommand*\wide@bar[2]{\if@single{#1}{\wide@bar@{#1}{#2}{1}}{\wide@bar@{#1}{#2}{2}}}
+\newcommand*\wide@bar@[3]{%
+  \begingroup
+  \def\mathaccent##1##2{%
+%Enable nesting of accents:
+    \let\mathaccent\save@mathaccent
+%If there's more than a single symbol, use the first character instead (see below):
+    \if#32 \let\macc@nucleus\first@char \fi
+%Determine the italic correction:
+    \setbox\z@\hbox{$\macc@style{\macc@nucleus}_{}$}%
+    \setbox\tw@\hbox{$\macc@style{\macc@nucleus}{}_{}$}%
+    \dimen@\wd\tw@
+    \advance\dimen@-\wd\z@
+%Now \dimen@ is the italic correction of the symbol.
+    \divide\dimen@ 3
+    \@tempdima\wd\tw@
+    \advance\@tempdima-\scriptspace
+%Now \@tempdima is the width of the symbol.
+    \divide\@tempdima 10
+    \advance\dimen@-\@tempdima
+%Now \dimen@ = (italic correction / 3) - (Breite / 10)
+    \ifdim\dimen@>\z@ \dimen@0pt\fi
+%The bar will be shortened in the case \dimen@<0 !
+    \rel@kern{0.6}\kern-\dimen@
+    \if#31
+      \overline{\rel@kern{-0.6}\kern\dimen@\macc@nucleus\rel@kern{0.4}\kern\dimen@}%
+      \advance\dimen@0.4\dimexpr\macc@kerna
+%Place the combined final kern (-\dimen@) if it is >0 or if a superscript follows:
+      \let\final@kern#2%
+      \ifdim\dimen@<\z@ \let\final@kern1\fi
+      \if\final@kern1 \kern-\dimen@\fi
+    \else
+      \overline{\rel@kern{-0.6}\kern\dimen@#1}%
+    \fi
+  }%
+  \macc@depth\@ne
+  \let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+  \mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+  \macc@set@skewchar\relax
+  \let\mathaccentV\macc@nested@a
+%The following initialises \macc@kerna and calls \mathaccent:
+  \if#31
+    \macc@nested@a\relax111{#1}%
+  \else
+%If the argument consists of more than one symbol, and if the first token is
+%a letter, use that letter for the computations:
+    \def\gobble@till@marker##1\endmarker{}%
+    \futurelet\first@char\gobble@till@marker#1\endmarker
+    \ifcat\noexpand\first@char A\else
+      \def\first@char{}%
+    \fi
+    \macc@nested@a\relax111{\first@char}%
+  \fi
+  \endgroup
+}
+\makeatother
+
+\usepackage{cutwin}
+
+
+% որ \[\]-ի դեպքում շատ լայն տարածքներ չթողի
+\newcommand{\densequation}{
+\setlength{\belowdisplayskip}{0pt} \setlength{\belowdisplayshortskip}{0pt}
+\setlength{\abovedisplayskip}{0pt} \setlength{\abovedisplayshortskip}{0pt}}
+
+
+
+
+% drawing
+\usepackage{float}
+\usetikzlibrary{
+  hobby,
+  intersections,
+  spath3,
+  decorations.markings,
+  arrows.meta,
+}
+\usepackage{xfp}
+\usetikzlibrary{patterns}
+\usetikzlibrary{calc}
+% drawing finish
+

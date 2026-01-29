@@ -1,0 +1,40 @@
+\begin{center}
+% \begin{cutout}{2}{}{}{4}
+% \end{cutout}
+\begin{tikzpicture}
+    \def\x{5}
+    \def\tick{0.1}
+    \def\gam{0.2*\x}
+    \def\alp{0.35*\x}
+    \def\bet{0.65*\x}
+    \def\delt{0.8*\x}
+    \def\radius{1.5}
+    
+    \draw (0,0) -- (\x,0);
+    \draw[thick, red, ->] (0,0) -- (\gam,0);
+    \draw[thick, blue, <->] (\alp,0) -- (\bet,0);
+    \draw[thick, red, <-] (\delt,0) -- (\x,0);
+    
+    \draw (0,\tick*2) -- ++(0,-2*\tick*2) node[below] {$0$};
+    \draw (\gam, \tick) -- ++(0,-2*\tick) node[below] {$\gamma$};
+    \draw (\alp,\tick) -- ++(0,-2*\tick) node[below] {$\alpha$};
+    \draw (\bet,\tick) -- ++(0,-2*\tick) node[below] {$\beta$};
+    \draw (\delt,\tick) -- ++(0,-2*\tick) node[below] {$\delta$};
+    \draw (\x,\tick*2) -- ++(0,-2*\tick*2) node[below] {$1$};
+    \draw (\x+4,0) circle (\radius);
+    
+    \draw[->, thick] (\x+0.5,0) -- (\x+2,0) node[midway, above] {$P$};
+    
+    \filldraw (\x+4,0) ++(30:\radius) circle (2pt) node[above right] {$\beta$};
+    \filldraw (\x+4,0) ++(150:\radius) circle (2pt) node[above left] {$\alpha$};
+
+    \draw[thick, blue, <->] (\x+4,0) ++(30:\radius) arc (30:150:\radius);
+    
+    \filldraw (\x+4,0) ++(225:\radius) circle (2pt) node[below left] {$\delta$};
+    \filldraw (\x+4,0) ++(315:\radius) circle (2pt) node[below right] {$\gamma$};
+
+    \draw[thick, red, <->] (\x+4,0) ++(225:\radius) arc (225:315:\radius);
+    
+    \filldraw (\x+4,-1.5) circle (2pt) node[below] {$\{0;1\}$};
+\end{tikzpicture}
+\end{center}

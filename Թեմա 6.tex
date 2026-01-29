@@ -1,0 +1,93 @@
+\documentclass[./main.tex]{subfiles}
+
+\begin{document}
+\onehalfspacing
+
+\section{Ենթա\-բազմութ\-յան փակումը տոպո\-լոգիական տարածությունում։ Փակման գործողություն բազմության վրա, տոպո\-լոգիայի տրում փակման գործողության միջոցով (Կուրատովսկու թեորեմը)։}\label{sec:6}
+
+\par Նախորդ թեմայում փակ ենթա\-բազմությունները սահմանվեցին բաց ենթա\-բազմու\-թյուն\-ների միջոցով։ Ինչպես արդեն ասվել է, բաց ենթա\-բազմություն հասկացությանը այլընտրանք է կետի շրջակայք հասկացությունը։ Այժմ ցույց տանք, թե ինչպես են նկարագրվում փակ ենթա\-բազմությունները կետերի շրջակայքերի տերմիններով։
+
+\begin{definition} $(X,\tau)$ տոպո\-լոգիական տարածությունում $x\in X$ կետը կոչվում է $M\subset X$ \textbf{ենթա\-բազմութ\-յան հպման կետ}, եթե այդ կետի ցանկացած շրջակայք ունի ոչ դատարկ հատում $M$-ի հետ։ 
+\end{definition}
+
+\begin{note}
+Մաթեմատիկական անալիզի դասընթացներում գործածվում է նաև \textbf{ենթաբազմու\-թյան սահմանային կետ} հասկացությունը։ 
+\par Այս դեպքում պահանջվում է, որպեսզի $x$ կետի ցանկացած շրջակայք ունենա ոչ դատարկ հատում $M\setminus \{x\}$ ենթա\-բազմութ\-յան հետ։ Պարզ է, որ ենթաբազմության ամեն մի սահմանային կետ նաև նրա հպման կետ է։ Հակառակը ընդհանուր դեպքում ճիշտ չէ։ Օրինակ՝ $\forall  (X,\tau)$ տարածությունում ցանկացած $x$ կետ հպման կետ է $\{x\}$ ենթա\-բազմութ\-յան համար, բայց սահմանային կետ չէ նրա համար։
+\end{note}
+
+\begin{definition} $M\subset X$ ենթա\-բազմութ\-յան բոլոր հպման կետերի բազմությունը կոչվում է այդ \textbf{ենթա\-բազմութ\-յան փակում} և նշանակվում է $\widebar{M}$։
+\par Անցումը $M$ ենթաբազմությունից $\widebar{M}$-ին, այսինքն $M\mapsto \widebar{M}$ համադրումը կոչվում է \textbf{փակման գործողություն տոպոլոգիական տարածությունում}։
+\end{definition}
+
+\begin{example}
+    ա) $(X,\textrm{անտիդ․})$ տարածությունում $X$-ի ցանկացած $x$ կետ հպման կետ է ցանկացած $M\subset X,\ M\neq \varnothing$ ենթա\-բազմութ\-յան համար, և ուրեմն $\widebar{M}=X$։
+    \par բ) $(X,\textrm{դիսկր․})$-ում $M$ ենթա\-բազմութ\-յան համար հպման կետեր են միայն և միայն $M\textrm{-ի}$ կետերը։ Այսինքն՝ $\widebar{M} = M, \forall M\subset X$ ենթա\-բազմութ\-յան դեպքում։
+    \par գ) $(\R,\textrm{սովոր․})$ տարածությունում $(a,b),\ (a,b],\ [a,b),\ [a,b]$ ենթա\-բազմություններից յու\-րա\-քանչ\-յու\-րի փակումը $[a,b]$-ն է։ Ամբողջ թվերի $\Z \subset \R$ ենթա\-բազմութ\-յան փակումը ինքը՝ $\Z$-ն է, իսկ բոլոր ռացիոնալ կամ իռացիոնալ թվերի ենթա\-բազմությունների փակումները $\R$-ն է։
+    \par դ) $(\R, \textrm{վերջ․ լր․})$ տարածությունում $(a,b],\ [a,b]$ ենթա\-բազմություններից յուրաքանչ\-յուրի փակումը $\R$-ն է։ Բացի այդ, ցանկացած $M\subset \R$ անվերջ ենթա\-բազմութ\-յան (մասնա\-վորապես $\Z$-ի) փակումը $\R$-ն է (ինչո՞ւ)։
+\end{example}
+
+\paragraph{Փակման հատկությունները։} Ցանկացած $(X,\tau)$ տոպո\-լոգիական տարածությունում՝
+\begin{enumerate}
+    \item $\widebar{\varnothing} =\varnothing,\ \widebar{X}=X$;
+    \item $ M\subset \widebar{M}$ ցանկացած $M$ ենթա\-բազմութ\-յան դեպքում;
+	\item եթե $M\subset N$, ապա $\widebar{M} \subset \widebar{N}$;
+	\item ցանկացած $M\subset X$ ենթա\-բազմութ\-յան դեպքում $\widebar{\widebar{M}}=\widebar{M}$։
+\end{enumerate}
+\par Սրանցից 1-ը, 2-ը և 3-ը ակնհայտ են, ապացուցենք 4-ը։ Ըստ 2-ի՝ $\widebar{M}\subset \widebar{\widebar{M}}$, ուստի մնում է ցույց տալ, որ $\widebar{\widebar{M}}\subset \widebar{M}$։ Դիտարկենք կամայական $x\in \widebar{\widebar{M}}$ կետ։ Այն հպման կետ է $\widebar{M}$-ի համար։ Ցույց տանք, որ $x$-ը հպման կետ է նաև $M$-ի համար։ Եթե $U$-ն $x$-ի որևէ բաց շրջակայք է, ապա $U\cap \widebar{M} \neq \varnothing$, և հետևաբար գոյություն ունի $y\in X$ կետ, որ $y\in U$ և $y\in \widebar{M}$։ Ստացվեց, որ $y$-ը հպման կետ է $M$-ի համար, իսկ $U$-ն նրա շրջակայք է, ուստի $U\cap M\neq \varnothing$, և ուրեմն $x\in \widebar{M}$։ Այսպիսով ապացուցվեց, որ $\widebar{\widebar{M}} \subset \widebar{M}\ \Rightarrow\ \widebar{\widebar{M}}=\widebar{M}$։
+
+\begin{note} Բերված ապացույցում մենք վերցրինք $x$ կետի ոչ թե կամայա\-կան $U$ շրջակայք, այլ կամայական $U$ \textbf{բաց} շրջակայք։ Առաջարկում ենք ընթերցողին նախ պարզել, թե ինչը ստիպեց այդպես վարվել, և ապա հիմնավորել, որ դրանով չի խախտվել ապացույցի լիարժեքությունը։
+\end{note}
+
+\begin{theorem}
+$X$ տոպ․ տարածության $M$ ենթա\-բազմությունը փակ ենթա\-բազմութ\-յուն է այն և միայն այն դեպքում, երբ $M$-ը պարունակում է իր բոլոր հպման կետերը։ 
+\end{theorem}
+\begin{proof}
+    ա) Եթե $M$-ը փակ է $\Rightarrow (X\setminus M)$-ը բաց է $\Rightarrow (X\setminus M)$-ում չկան $M$-ի հպման կետեր $\Rightarrow M$-ի հպման կետերը $M$-ում են $\Rightarrow \widebar{M} \subset M$։
+    \par բ) Եթե $\widebar{M}\subset M\ \Rightarrow\ (X\setminus M)$-ում $M$-ի հպման կետեր չկան $\Rightarrow \forall x\in X\setminus M$ կետ հպման կետ չէ $M$-ի համար $\Rightarrow \forall x\in X\setminus M$ կետի համար $\exists x$-ի $U_{x}$ (բաց) շրջակայք, որ $U_{x}\subset (X\setminus M)$։ Այսպիսով $(X\setminus M)$-ը շրջակայք է իր բոլոր կետերի համար $\Rightarrow (X\setminus M)$-ը բաց ենթա\-բազմություն է $\Rightarrow M$-ը փակ ենթա\-բազմություն է։
+\end{proof}
+\begin{hetevanq_counter} $M\subset X$ ենթաբազմությունը փակ է այն և միայն այն դեպքում, երբ համընկնում է իր փակման հետ՝ $M=\widebar{M}$։
+\end{hetevanq_counter}
+
+\begin{hetevanq_counter} Ցանկացած $M\subset X$ ենթա\-բազմութ\-յան $\widebar{M}$ փակումը $X$-ի փակ ենթա\-բազմություն է։ Իրոք, քանի որ $\widebar{\widebar{M}}=\widebar{M}$ ըստ հատկություն 4-ի, ուստի $\widebar{M}$-ը փակ ենթա\-բազմություն է համաձայն հետևանք 1-ի։
+\end{hetevanq_counter}
+\begin{theorem} Ցանկացած $M\subset X$ ենթա\-բազմութ\-յան $\widebar{M}$ փակումը համընկնում է $M$-ը ընդգրկող բոլոր փակ ենթա\-բազմությունների հատման հետ։ Այսինքն ${\widebar{M}=\bigcap F}$, որտեղ հատումը կատարվում է ըստ այն բոլոր $F\subset X$ փակ ենթա\-բազմությունների, որ $M\subset F$։
+\end{theorem}
+\begin{proof} Մի կողմից՝ եթե $F$-ը փակ է և $M\subset F$, ապա $\widebar{M} \subset \widebar{F}=F$, ուստի $\widebar{M} \subset \bigcap F$։ Մյուս կողմից՝ քանի որ $M\subset \widebar{M}$ և $\widebar{M}$-ը փակ է, ուստի $F$ փակ ենաբազմություններից մեկը $\widebar{M}$-ն է։ Հետևաբար $\bigcap F\subset \widebar{M}$, և ուրեմն $\widebar{M}=\bigcap F$։
+\end{proof}
+\begin{theorem}
+\label{թեորեմ 3}
+Ցանկացած $M, N\subset X$ ենթա\-բազմությունների դեպքում տեղի ունի
+$\widebar{M\cup N}=\widebar{M}\cup \widebar{N}$ համընկում։
+\end{theorem}
+
+\begin{proof} Ցույց տանք, որ $\widebar{M\cup N}$ և $\widebar{M}\cup \widebar{N}$ բազմություններից յուրաքանչյուրը մյուսի ենթա\-բազմություն է։ Իրոք, $M\subset \widebar{M},\ N\subset \widebar{N}\ \Rightarrow\ M\cup N\subset \widebar{M} \cup \widebar{N}\ \Rightarrow\ \widebar{M\cup N}\subset \widebar{\widebar{M} \cup \widebar{N}}=\widebar{M} \cup \widebar{N}$։ Այստեղ օգտվեցինք նրանից, որ $\widebar{M}\cup \widebar{N}$-ը փակ է որպես երկու փակ ենթա\-բազմությունների միավորում։ Մյուս կողմից՝
+\[ M\subset M\cup N,\ N\subset M\cup N \ \Rightarrow\ \widebar{M} \subset \widebar{M\cup N},\ \widebar{N} \subset \widebar{M\cup N}\ \Rightarrow\ \widebar{M} \cup \widebar{N} \subset \widebar{M\cup N} \qedhere \]
+\end{proof}
+Ավարտելով փակման հատկությունները՝ նկատենք, որ $\forall M, N \subset X$ ենթա\-բազ\-մութ\-յուն\-ների դեպքում տեղի ունի $\overline{M\cap N} \subset \overline{M}\cap \overline{N}$ ներդրում (հիմնավորել և բերել օրինակ, երբ $\overline{M\cap N} \neq \overline{M}\cap \overline{N}$)։
+\subsection*{Տոպո\-լոգիայի տրում փակման գործողության միջոցով}
+Վերը $(X,\tau)$ տոպո\-լոգիական տարածության ամեն մի $M\subset X$ ենթա\-բազմութ\-յան համար սահմանվեց $\widebar{M}$ փակ ենթա\-բազմություն ($M$-ի փակումը $\tau$ տոպո\-լոգիայում)։ Այդ $M\mapsto\widebar{M}$ համադրումը կոչվում է \textbf{փակման գործողություն տոպոլոգիական տարածությունում}։ Այն օժտված է վերը դիտարկված որոշակի հատկություններով։
+% Այդ $M\mapsto\widebar{M}$ համադրումը կոչվում է \textbf{փակման գործողություն տոպո\-լոգիական տա\-րա\-ծութ\-յու\-նում}։ Այն օժտված է վերը դիտարկված որոշակի հատկություններով։
+\par Այժմ գնալու ենք հակառակ ուղղությամբ․ վերացարկելով այդ հատկություններից հիմնականները՝ սահմանվում է գործողություն, որի միջոցով սահմանվում է տոպո\-լոգիա բազմության վրա։ 
+
+\begin{definition}
+Դիցուք ինչ-որ եղանակով $X$ բազմության ամեն մի $M$ ենթա\-բազ\-մութ\-յան համադրված է $X$-ի ինչ-որ ենթա\-բազմություն, որը նշանակվում է $\cl M$ ($\cl\textrm{-ն}$ ֆրանսերեն clôture — փակում բառի կրճատն է), այնպես, որ բավարարվում են հետևյալ 4 պահանջները․
+\par K1. $\cl\varnothing =\varnothing$; \quad K2. $M\subset \cl M$; \quad K3. $\cl(\cl M)=\cl M$;
+\par K4. $\cl(M\cup N)=\cl M\cup \cl N$, ցանկացած $M, N\subset X$ ենթա\-բազմությունների դեպքում։
+\par Ամեն մի այսպիսի գործողություն կոչվում է Կուրատովսկու \textbf{փակման գործողություն բազմության վրա}։
+\end{definition}
+\begin{lemma}
+1-4 աքսիոմներից հետևում է՝ 
+    ա) $\cl X=X$; \par
+    բ) եթե $A\subset B\subset X$, ապա $\cl A\subset \cl B$։
+\end{lemma}
+\begin{proof}
+ա) Մի կողմից, ըստ K2-ի $X\subset \cl X$, իսկ մյուս կողմից ակնհայտ է, որ $ \cl X \subset X$։ Ուստի $ \cl X=X$;\par
+բ) $A\subset B\ \Rightarrow\ (B=A\cup (B\setminus A))\ \Rightarrow\ (\cl B=\cl A\cup \cl(B\setminus A))\ \Rightarrow\ (\cl A\subset \cl B)$։
+\end{proof}
+\begin{theorem}
+$X$ բազմության վրա տրված Կուրատովսկու փակման գործողությունը որոշում է տոպո\-լոգիա $X$-ի վրա։ Ընդ որում՝ ցանկացած $M\subset X$ ենթա\-բազմութ\-յան $\widebar{M}$ փակումը այդ տոպո\-լոգիայում համընկնում է $\cl M$-ի հետ՝ $\widebar{M}=\cl M$։
+\end{theorem}
+\begin{proof} Սահմանենք $\sigma $ տոպո\-լոգիա $X$ բազմության վրա՝ հիմնվելով փակ ենթա\-բազմությունների վրա (տե՛ս թեորեմ 3-ը թեմա 5-ում)։ $M\subset X$ ենթա\-բազմութ\-յունը համարելու ենք փակ $\sigma $ տոպո\-լոգիայում, եթե $M=\cl M$։ Այսպիսով ${M\in \sigma} \ \Leftrightarrow\ {M=\cl M}$։ Ստուգենք $\sigma $-ի համար տոպո\-լոգիայի 1*-3* աքսիոմները (տե՛ս թեորեմ 3-ը թեմա 5-ում)։ Դրանցից 1*-ը հետևում է K1-ից և լեմմայից։ Միավորման 2* աքսիոմը բավարարվում է շնորհիվ K4-ի։ Ստուգենք 3*-ը։ Դիցուք ունենք փակ ենթա\-բազմութ\-յուն\-նե\-րի որևէ $\left\{ M_i \subset X, i\in I\mid \cl M_i=M_i \right\}$ ընտանիք։ Ցույց տանք, որ նրանց $F=\bigcap\limits_{i\in I} M_{i}$ հատումը պատկանում է $\sigma$-ին (դա համարժեք է նրան, որ ցույց տանք $\cl F=F$)։ Մի կողմից ունենք $F\subset \cl F$ ըստ K2-ի։ Մյուս կողմից՝ $F\subset M_i\ \Rightarrow\ (\cl F \subset \cl M_i )$, և քանի որ $\cl M_i=M_i$, ուստի $\cl F\subset \bigcap\limits_{i\in I} M_i=F$։ Այսպիսով $\cl F=F$, և ուրեմն $\sigma$-ն տոպո\-լոգիա է։
+\par Այժմ ապացուցենք թեորեմի երկրորդ մասը․ ցույց տանք, որ $\forall M\subset X$ ենթա\-բազմութ\-յան համար $\widebar{M} =\cl M$։ Ըստ \hyperref[թեորեմ 3]{թեորեմ 3}-ի ունենք՝ $\widebar{M}=\bigcap F$, որտեղ $\cl F=F$ և $M\subset F$։ Նրանից, որ $M\subset F \ \Rightarrow\ (\cl M\subset \cl F=F)\ \Rightarrow\ (\cl M\subset F)\ \Rightarrow\ (\cl M\subset \bigcap F=\widebar{M})$։ Մյուս կողմից՝ $M\subset \cl M\ \Rightarrow\ \widebar{M} \subset \widebar{\cl M}$։ Քանի որ $\cl(\cl M)=\cl M$ ըստ K3-ի, ուստի $\cl M\in \sigma$ ըստ $\tau$ տոպո\-լոգիայի սահմանման։ Քանի որ $\cl M$-ը փակ ենթա\-բազմություն է $\sigma$ տոպո\-լոգիայում, հետևաբար $\widebar{\cl M}=\cl M$, որից հետևում է, որ $\widebar{M}=\cl M$։
+\end{proof}
+\end{document}

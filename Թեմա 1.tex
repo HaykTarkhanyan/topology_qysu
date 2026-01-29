@@ -1,0 +1,369 @@
+\documentclass[./main.tex]{subfiles}
+
+\begin{document}
+\onehalfspacing
+
+\section[բազմություններ]{Բազմություններ, գործողությունները դրանց հետ (հատում, միա\-վորում, տարբերություն), բազմությունների ընտանիքներ։ Բազմությունների արտա\-պատ\-կերում\-ներ (ինյեկտիվ, սյուրյեկտիվ, բիյեկտիվ արտապատկերումներ)։}\label{sec:1}
+
+Բազմությունների տեսության հիմնադիրը գերմանացի մաթեմատիկոս Գեորգ Կանտորն է ($1845$-$1918$), որը $1878$-$1884$ թվերի միջև իր $6$ հիմնարար աշխատանք\-նե\-րով ճանա\-պարհ բացեց մաթեմատիկայի այդ բաժնի համար։ Նրան ժամանակակից գրեթե բոլոր նշանավոր մաթեմատիկոսները կա՛մ դրսևորում էին ցուցադրական անտար\-բերութ\-յուն, կա՛մ էլ (հատկապես Շվարցը և Կրոնեկերը) բացահայտ թշնա\-մու\-թյուն Կանտորի նորարարական ջանքերի նկատմամբ։ Պաշտոնապես բազմու\-թյունների տեսության ճանաչումը սկսվեց $1897$ թվին, երբ Առաջին միջազգային մաթե\-մա\-տի\-կա\-կան կոնգ\-րեսում Ժ․ Ադամարը և Ա․ Հուրվիցը մատնանշեցին այդ տեսության կարևոր կիրա\-ռութ\-յուններ անալիզում։
+\par Նշենք, որ մաթեմատիկայի այնպիսի բաժիններ, ինչպիսիք են ընդհանուր տոպո\-լո\-գիան, չափականության և չափի տեսությունները, անխզելիորեն կապված են բազ\-մութ\-յունների տեսության հետ և ի հայտ եկան նրա հետ գրեթե միաժամանակ։
+\par Ուստի ընդհանուր տոպոլոգիայի դասընթացը սովորաբար սկսվում է բազմութ\-յուն\-ների տեսության մի որոշ, թեկուզև շատ համառոտ ակնարկով։
+
+\par Բազմությունների տեսության հիմքում ընկած է \textbf{բազմություն} հասկացությունը։ Ըստ Կանտորի նշանավոր սահմանման՝ բազմություն ասելով՝ մենք հասկանում ենք մեր ին\-տուի\-ցի\-ա\-յի կամ մտքի արդյունքում իրարից լավ տարբերվող զանազան օբյեկտների
+ամ\-բողջութ\-յուն։ Կանգ չառնելով այստեղից ծագող հնարավոր թեր\-ըմբռնում\-ների և հա\-կա\-ճառում\-նե\-րի վրա՝ արձանագրենք միայն, որ այսուհետև մենք «բազմություն», «դաս», «ընտանիք», «համախմբություն», «ամբողջություն» տեր\-մին\-ները գործածելու ենք որպես հոմանիշներ։
+\par Հաջորդ կարևոր հասկացությունը \textbf{բազմության տարրն} է։ Բազմությունը կազմ\-ված է տարրերից և որոշվում է իր տարրերով․ գրում ենք $x \in X$, եթե $x$ օբյեկտը $X$ բազմության տարր է։ Սովորաբար վերջավոր բազմությունը տրվում է նրա տարրերի թվարկումով՝ $\{a_1, a_2, \dots, a_n\}$։ Դիտարկվում է նաև դատարկ բազմություն․ նշա\-նակ\-վում է $\varnothing$ սիմվոլով և չունի տարրեր։
+
+\par Եթե $Y$ բազմության ամեն մի տարր նաև տարր է $X$ բազմության համար, ապա $Y$-ը կոչվում է $X$-ի \textbf{ենթաբազմություն}։ Ասում են նաև, որ $Y$-ը \textbf{ընկած է} $X$-ում, կամ $Y$-ը $X$-ի \textbf{մաս է}, և գրառում են $Y\subset X$։ Համարվում է, որ $\varnothing \subset X$ ցանկացած $X$-ի դեպքում։
+\par Ընդունված է $X$ բազմության $\varnothing$ և $X$ ենթաբազմությունները անվանել նրա \textbf{ոչ սեփական ենթաբազմություններ։}
+\par Բնականաբար երկու $X$ և $Y$ բազմություններ համընկնում են (նույնն են) այն և միայն այն դեպքում, երբ նրանք կազմված են միևնույն տարրերից։ Դա գրառվում է $X=Y$ տեսքով և կարդացվում է ինչպես վերը նշվեց (և ոչ թե $X$-ը հավասար է $Y\textrm{-ին}$)։ Երբեմն $X=Y$ նույնականությունը հաստատելու նպատակով ցույց է տրվում, որ $X\subset Y$ և $Y\subset X$։
+\par Հաճախ $X$ բազմությունից նրա որևէ $Y$ ենթաբազմություն առանձնացվում է այսպես կոչված \textbf{նկարագրական եղանակով}՝ գրառվում է 
+\[Y=\left\{x \in X \mid (x\textrm{ տարրի վերաբերյալ պահանջ})\right\}\]
+%  կամ $Y=\left\{x \in X ; (x\textrm{-ի վերաբերյալ} \textrm{ պահանջ})\right\}$
+Կարդաց\-վում է․ $Y$-ը կազմված է $X$-ի այն բոլոր տարրերից, որոնք բավարարում են նշված պահանջին։
+% \[ Y=\left\{x \in X \mid (x\textrm{տարրի վերաբերյալ} \textrm{ պահանջ})\right\} \textrm{ կամ } Y=\left\{x \in X ; (x\textrm{-ի վերաբերյալ} \textrm{ պահանջ})\right\}։\] 
+% Կարդաց\-վում է․ $Y$-ը կազմված է $X$-ի այն բոլոր տարրերից, որոնք բավարարում են նշված պահանջին։
+\begin{example}
+Դիցուք $\Z=\{0, \pm 1, \pm 2, \dots \}$, բոլոր ամբողջ թվերի բազմությունն է, իսկ $2\Z=\{0, \pm 2, \pm 4, \dots\}$ բոլոր զույգ թվերի բազմությունն է։ Պարզ է, որ $2\Z\subset\Z$ և $2\Z$-ը կարող է գրառվել՝ $2\Z=\left\{x \in \Z \mid x\textrm{-ը առանց մնացորդի բաժանվում է 2-ի վրա}\right\}$։
+\end{example}
+Երբեմն «ավելի ծավալուն» բազմությունը նկարագրվում է (սահմանվում է) «ավե\-լի նվազ ծավալով» բազմության միջոցով։
+\begin{example}
+$\R^2$ կոորդինատային հարթությունը կարող է ներկայացվել $\R$ թվային ուղղի միջոցով, որպես թվազույգերի բազմություն՝ $\R^2=\{(x, y)\mid {x, y \in \R}\}$։
+\end{example}
+Բազմությունների համար սահմանվում են \textbf{հատման}, \textbf{միավորման} և \textbf{տար\-բե\-րու\-թյան} \textbf{գործողություններ}։ Օգտվելով նկարագրական եղանակից՝ երկու բազմութ\-յուն\-ների հատման, միավորման և տարբերության սահմանումները կարելի է գրառել համառոտ՝
+\[
+A\cap B =\left\{ x \mid x \in A \textrm{ և } x \in B \right\}, \
+A\cup B =\left\{x\mid x\in A \textrm{ կամ } x\in B\right\}, \
+A\setminus B=\left\{ x\in A \mid x \not\in B\right\}։
+\]
+\par Այս գործողություններն օժտված են հետևյալ հատկություններով․ ցանկացած $A, B, C$ բազմությունների դեպքում՝
+\begin{enumerate}
+    \item[ա)] $A\cup A = A,\ A\cap A=A,\  A\cup \varnothing=A, \ A\cap \varnothing=\varnothing$;
+    \item[բ)] ${(A\cup B)\cup C=A\cup (B\cup C)},\ {A\cup B=B\cup A},\ {(A\cap B)\cap C=A\cap (B\cap C)},\\ {A\cap B=B\cap A}$;
+    \par
+    բ) հատկությունները կոչվում են $\cup$ և $\cap$ գործողությունների զու\-գոր\-դա\-կա\-նու\-թյան և տեղա\-փոխա\-կա\-նութ\-յան հատկություններ։
+    \item[գ)] $(A\cup B)\cap C=(A\cap C)  \cup (B\cap C),\ (A\cap B)\cup  C=(A\cup C)  \cap (B\cup C)$;\par
+    գ) հատկությունները կոչվում են բաշխական հատկություններ համա\-պատաս\-խանաբար միավորման և հատման նկատմամբ։
+    \item[դ)] $A\setminus(B_1\cup B_2)=(A\setminus B_1)\cap (A\setminus B_2),\ A\setminus (B_1\cap B_2)= (A\setminus B_1)  \cup (A\setminus B_2)$։\par
+    դ) նույնությունները կոչվում են դե Մորգանի բանաձևեր։
+\end{enumerate}
+\begin{example}
+Ապացուցենք դե Մորգանի առաջին բանաձևը։
+\par Այդ նպատակով ցույց տանք, որ $A \setminus (B_1 \cup B_2)$ բազմության յուրաքանչյուր տարր պատկանում է $(A\setminus B_1)\cap (A\setminus B_2)$ բազմությանը և հակառակը՝
+\[
+x \in A\setminus (B_1\cup B_2) \Rightarrow 
+\begin{cases} x\in A \\ x\not\in B_1\cup B_2 \end{cases} \hspace{-1.5em} \Rightarrow \begin{cases}x\in A \\ x\not\in B_1 \textrm{ և } x\not\in B_2 \end{cases} \hspace{-1.5em}
+ \Rightarrow \begin{cases} x \in A \setminus B_1 \\ x\in A\setminus B_2 \end{cases} \hspace{-1.5em} \Rightarrow x \in (A\setminus B_1)\cap(A\setminus B_2)
+\]
+\par Այս օրինակում հակառակը ցույց տալու համար նոր դատողություններ անելու կարիք չկա․ բոլոր քայլերը հակադարձվում են վերջից դեպի սկիզբ։ Փաստորեն բոլոր $\Rightarrow$ անցումներն ունեն $\Leftrightarrow$ համարժեքության բնույթ։
+\qed
+\end{example}
+\par Եթե ունենք (վերջավոր քանակով) $A_1, A_2, \dots, A_n$ բազմություններ, ապա նրանց հատումը և միավորումը գրառվում են հետևյալ տեսքերով՝
+\begin{equation*}
+    \begin{aligned}
+    & A_1 \cap A_2 \cap \dots \cap A_n = \mathsmaller{\bigcap}\limits_{i=1}^n A_i = \left\{ x \mid x \in A_i, \textrm{ որտեղ } i=1,2,\dots,n \right\} \\
+    & A_1 \cup A_2 \cup \dots \cup A_n = \mathsmaller{\bigcup}\limits_{i=1}^n A_i = \left\{ x \mid \textrm{գոյություն ունի } i, \textrm{ որ } x\in A_i \right\}
+    \end{aligned}
+\end{equation*}
+\par Այս դեպքում վերը բերված դե Մորգանի բանաձևերը գրառվում են հետևյալ տեսքերով՝
+\begin{equation*}
+    A \setminus \mathsmaller{\bigcup}\limits_{i=1}^n B_i = \mathsmaller{\bigcap}\limits_{i=1}^n \left(A\setminus B_i \right), \quad
+    A \setminus \mathsmaller{\bigcap}\limits_{i=1}^n B_i = \mathsmaller{\bigcup}\limits_{i=1}^n \left(A\setminus B_i \right),
+\end{equation*}
+որտեղ $A, B_1, B_2, \dots, B_n$-ը կամայական բազմություններ են։
+\par Հաճախ դիտարկվում են բազմություններ, որոնց տարրերը իրենք ևս բազմութ\-յուն\-ներ են։ Այդպիսի բազմությունը կոչվում է \textbf{բազմությունների ընտանիք}։
+\begin{example}
+Դիտարկենք $\R^2$ հարթության մեջ գտնվող բոլոր ուղիղների բազմութ\-յունը։ Սա բազմությունների ընտանիք է, որի տարրերը (ուղիղները) իրենք ևս բազ\-մու\-թյուններ են կազմված $\R^2$-ի կետերից։
+\end{example}
+Դիցուք $I$-ն բազմություն է, որի ամեն մի $i\in I$ տարրի համապատասխանեցված է որևէ $X$ բազմություն։ Այս $X$ բազմություններից կազմված բազմությունը (բազ\-մութ\-յունների ընտանիքը) նշանակվում է $\left\{ X_i; \,  i \in I \right\}$ և կոչվում է \textbf{բազմությունների ինդեքսավոր\-ված ընտանիք}։ Այստեղ $I$-ն կոչվում է \textbf{ինդեքսների բազմություն}։
+
+% ավելացված
+\par Նշենք, որ բազմությունների ընտանիքը ինդեքսավորելիս սովորաբար որպես ինդեքսավորվող բազմություն ընտրում են արդեն հայտնի և լավ ընկալվող որևէ բազմություն կամ նրա որևէ մասը։
+\par Օրինակ, թվերից կազմված հաջորդականության տարրերը սովորաբար ին\-դեք\-սա\-վորում են (համարակալում են) կամ բոլոր բնական թվերով, կամ այդ բազմության որևէ վերջավոր մասով։
+
+% ավելացված
+\begin{example}
+Ինդեքսավորենք կոորդինատային $\R^2$ հարթության $O$ սկզբնակետով անցնող բոլոր ուղիղների բազմությունը։ Նկատենք, որ ամեն մի այդպիսի ուղիղ միարժեքորեն որոշվում է այն ամենափոքր $\alpha$ անկյունով, որով պետք է պտտել $OX$ առանցքը $O$ կետի շուրջը ժամսլաքին հակառակ ուղղությամբ, մինչև որ այն համընկնի $l$ ուղղի հետ։ 
+\begin{center}
+\begin{tikzpicture}%[scale=0.8]
+
+    % % Axes
+    \draw[->] (-2,0) -- (2,0) node[anchor=west] {};
+    \draw[->] (0,-2) -- (0,2) node[anchor=south] {};
+    
+    % % Labels for points
+    \node at (-1.15,1.45) {$l$};  % Label l near the intersection point
+    
+    \node at (0.5,0.75) {$\alpha$};  % Label alhpa over the arch
+
+    % % Dots at the key points
+    \filldraw (0,0) circle (2pt);  % Origin (0)
+    \node[anchor=north east] at (0,0) {$O$};  % Label 0
+    
+    % % Calculate intersection point of line and circle in second quadrant
+    % % Intersection point is (-1.2, 1.2) based on simple geometry
+    \filldraw (-1.05,1.05) circle (2pt);  % Point l at the intersection of the line and circle
+
+    % % Line from center to point l
+    \draw[thick] (1.4,-1.4) -- (-1.4,1.4);
+    
+    % Angle
+    % \draw[thick] (1.5,0) -- (0,0) -- (-1.05,1.05);
+    % \draw (0.5,0) arc[start angle=0,end angle=135,radius=0.5];
+    % \node at (0.1,0.6) {$\alpha$};  % Label for the angle
+
+    \coordinate (center) at (0,0);
+      \def\radius{1.5cm}
+      % a circle
+      \draw (center) circle[radius=\radius];
+    
+      % a random point of the circl
+    \draw
+      (2,0) coordinate (a)
+      -- (0,0) coordinate (b)
+      -- ++(135:\radius) coordinate (c)
+      pic[draw=orange,->,very thick, angle eccentricity=1.2,angle radius=0.65cm] {angle=a--b--c};
+\end{tikzpicture}
+\end{center}
+Ուստի տվյալ բազմության տարրերը կարելի է ինդեքսավորել $[0,2\pi)$ միջակայքի բոլոր թվերով։
+\par Այստեղից նաև ստանում ենք, որ ցանկացած շրջանագծի կետերի բազմությունը նույնպես կարելի է ինդեքսավորել $[0,2\pi)$ միջակայքի բոլոր թվերով։
+
+% \begin{center}
+% \begin{tikzpicture}
+% \coordinate (center) at (0,0);
+%   \def\radius{1.5cm}
+%   % a circle
+%   \draw (center) circle[radius=\radius];
+
+% \node[anchor=north east] at (0,0) {$O$}
+
+% \draw
+%   (2,0) coordinate (a)
+%   -- (0,0) coordinate (b)
+%   -- ++(2/3*180:\radius) coordinate (c)
+%   pic["$\alpha$",draw=orange,->,very thick, angle eccentricity=1.2,angle radius=0.65cm] {angle=a--b--c};
+  
+% \node at (-0.5,0.5) {$b$};
+% \end{tikzpicture}
+% \end{center}
+
+
+\end{example}
+
+\begin{example}
+Դիտարկենք $\R^2$ հարթության մեջ այն բոլոր ուղիղներից կազմված $L$ բազմությունը, որոնք գտնվում են կոորդինատների $0$ սկզբնակետից $1$ միավոր հեռավորության վրա։ Ցույց տանք, թե ինչպես կարելի է ինդեքսավորել $L$-ը։ Նկա\-տենք, որ այդ բազմության ամեն մի տարր (ուղիղ) ունի ճիշտ մի ընդհանուր կետ $S=\left\{ (x; y) \mid x^2+y^2=1 \right\}$ շրջանագծի հետ (շոշափման կետը)։ Նշանակելով $l_s$-ով շրջանագծի $s\in S$ կետով տարված շոշափողը, կարող ենք $L$ բազմությունը ներ\-կա\-յացնել որպես բազմությունների ինդեքսավորված ընտանիք՝ $L=\left\{l_s ; s\in S\right\}$։
+\par Այս օրինակում որպես ինդեքսների բազմություն հանդես եկավ շրջանագծի բոլոր կետերից կազմված $S$ բազմությունը։
+\begin{center}
+\includegraphics[scale=0.25]{images/id1.png}
+\end{center}
+\end{example}
+\label{օրինակ 1:6}
+\par Նկատենք, որ ամեն մի կոնկրետ դեպքում ինդեքսավորող բազմության ընտրութ\-յունը կատարվում է (ոչ միակ եղանակով) ըստ նպատակահարմարության։
+\par Հաշվի առնելով դե Մորգանի բանաձևերի կարևորությունը՝ նշենք, որ դրանք ճիշտ են ցանկացած ինդեքսավորված բազմությունների դեպքում․ եթե ունենք որևէ $\{X_i; \, i\in I \}$ ինդեքսավորված ընտանիք և $X$ բազմություն, ապա
+\begin{equation} \label{eq:1.1}
+    X \setminus \mathsmaller{\bigcup}\limits_{i \in I} X_i = \mathsmaller{\bigcap}\limits_{i \in I} (X \setminus X_i), \quad X \setminus \mathsmaller{\bigcap}\limits_{i \in I} X_i =\mathsmaller{\bigcup}\limits_{i \in I} (X\setminus X_i) 
+\end{equation}
+
+% ավելացված
+\par Ապացուցենք \eqref{eq:1.1} նույնություններից երկրորդը․
+\begin{equation*}
+    \begin{aligned}
+    &x \in \left(X \setminus \mathsmaller{\bigcap}\limits_{i\in I} X_i \right)\
+    \Leftrightarrow \ \left(x\in X \textrm{ և } x\not\in \mathsmaller{\bigcap}\limits_{i\in I} X_i \right)\ \Leftrightarrow \ \big(x\in X \textrm{ և գոյություն ունի }
+    \\ & i_0 \in I \textrm{ ինդեքս, որ } x \not\in X_{i_0}\big) \ \Leftrightarrow \ x \in (X \setminus X_{i_0}) \Leftrightarrow \ x \in \mathsmaller{\bigcup}\limits_{i\in I} (X\setminus X_i)
+    \qed
+    \end{aligned}
+\end{equation*}
+
+\par Եթե $Y$-ը $X$-ի ենթաբազմություն է, ապա $X\setminus Y$-ը կոչվում է \textbf{$\boldsymbol{Y}$-ի լրացում $\boldsymbol{X}$-ում}։
+Մասնավոր դեպքում, երբ $\{X_a; \, i \in I\}$ ընտանիքի բոլոր $X$ տարրերը միևնույն $X$ բազմության ենթաբազմություններ են՝ $X_i\subset X$, դե Մորգանի $\eqref{eq:1.1}$ բանաձևերն ընդունում են մտապահման հեշտ ձև․ միավորման լրացումը լրացումների հատումն է, իսկ հատման լրացումը լրացումների միավորումն է։
+\par Տարբեր բազմություններ միմյանց հետ համեմատելու միջոցը \textbf{բազմությունների արտապատկերումներն} են։
+\par Եթե $X$ բազմության ամեն մի $x$ տարրի համապատասխանեցված է $Y$ բազմության որևէ $y$ տարր, ապա ասում են, որ տրված է $X$ բազմության $f:X\rightarrow Y$ արտա\-պատ\-կերում $Y$ բազմության մեջ։
+\par
+Այս դեպքում $y$ տարրը կոչվում է $x$ տարրի կերպար և նշանակվում է $y=f(x)$։ Ինքը՝ $X$ բազմությունը կոչվում է $f$ արտապատկերման \textbf{որոշման տիրույթ}, իսկ $Y$-ը՝ $f$-ի \textbf{արժեքների տիրույթ}։ Ամեն մի ոչ դատարկ $A\subset X$ ենթաբազմության համար սահմանվում է նրա $f(A)\subset Y$ կերպարը, որպես $Y$-ի ենթաբազմություն՝ կազմված $Y$-ի այն բոլոր տարրերից, որոնց համար գոյություն ունի $x\in X$ տարր, որ $f(x)=y$։ Այսպիսով՝ եթե $A \ne \varnothing$, ապա կրճատ՝ $f(A)=\left\{y\in Y \mid \exists x\in X \textrm{ և } f(x)=y\right\}$։ 
+% ավելացված
+Իսկ $A = \varnothing$ դեպքում համարվում է $f(\varnothing) = \varnothing$:
+
+% ավելացված
+\par Եթե $Y \subset X$, ապա դիտարկվում է $i:Y \rightarrow X$ արտապատկերում՝ սահմանելով $i(y)=y$, $\forall y \in Y$ տարրի համար։ Ընդունված է $i$ արտապատկերումն անվանել $\boldsymbol{Y}$ \textbf{բազմության ներդրում} $\boldsymbol{X}$ \textbf{բազմության մեջ}:
+
+\par Ցանկացած $B\subset Y$ ենթաբազմության համար սահմանվում է նրա $f^{-1}(B)$ \textbf{նախա\-կերպարը} $f:X\rightarrow Y$ արտապատկերման դեպքում որպես $X$-ի ենթաբազմություն՝ կազմված $X$-ի այն բոլոր $x$ տարրերից, որ $f(x)\in B$։ Կրճատ՝ $f^{-1}(B)=\{x\in X\mid f(x)\in B\}$։
+% ավելացված
+Պարզ է, որ $f^{-1}(Y)=X$, և համարվում է $f^{-1}(\varnothing)=\varnothing$ ցանկացած $f:X\rightarrow Y$ արտապատկերման դեպքում։
+
+% ավելացված
+\par Նշենք նաև, որ ընդունված է $Y$-ի մի տարր պարունակող ամեն մի $\{y_0\}$ ենթա\-բազ\-մության $f^{-1}(\{y_0\})$ նախակերպարը $X$-ում գրառել ավելի պարզ՝ $f^{-1}(y_0)$ տեսքով և անվանել $y_0$ տարրի նախակերպար $f : X \rightarrow Y$ արտապատկերման դեպքում։
+
+% \begin{example}
+% Դիցուք $X$-ը $\R^2$ կոորդինատային հարթության մեջ $3\times 3$ չափսերով $X=\{ (x_1,x_2)\mid 1\leq x_1\leq 4;\, 1\leq x_2\leq 4\}$ քառակուսին է, $Y$-ը $\R$ թվային ուղիղն է ներդրված $\R^2$-ում՝ $Y=\{(x_1,x_2)\mid x_2=0\}$, իսկ $f:X\rightarrow Y$ արտապատկերումը քառակուսու պրոյեկցիան է՝ $f(x_1,x_2)=x_1$։ Դիտարկենք $A\subset X,\ B\subset Y$ ենթա\-բազմութ\-յուններ՝ որպես $A$ վերցնելով $\{(x_1,x_2)\mid 1\leq x_1\leq 2;\, 1\leq x_2\leq 2\}$ քառակուսին, իսկ որպես $B$ վերցնելով $[0;2]$ հատվածը $\R$-ում՝ $B=\{(x_1,0)\mid 0\leq x_1 \leq 2\}$։
+% \begin{center}
+% \begin{tikzpicture}
+% % y - coords
+% \node[anchor=north east] at (0, 0) {$(0;0)$};
+% \node[anchor=east] at (0, 1) {$(0;1)$};
+% \node[anchor=east] at (0, 2) {$(0;2)$};
+% \node[anchor=east] at (0, 4) {$(0;4)$};
+% % x - coords
+% \node[anchor=north] at (1, 0) {$(1;0)$};
+% \node[anchor=north] at (2, 0) {$(2;0)$};
+% \node[anchor=north] at (4, 0) {$(4;0)$};
+
+% %\draw [decoration={brace}, decorate] (0,0) -- (2,0);
+% \node at (1.5, 1.5) {$A$};
+% \node at (2.5, 2.5) {$X$};
+% \node[anchor=south east] at (1, 0) {$B$};
+% \node[anchor=east] at (2, 0.5) {${\downarrow} f$};
+% %points on y axes
+% \filldraw (1,0) circle (2.5pt);
+% \filldraw (2,0) circle (2.5pt);
+% \filldraw (4,0) circle (2.5pt);
+% %points on y axes
+% \filldraw (0,1) circle (2.5pt);
+% \filldraw (0,2) circle (2.5pt);
+% \filldraw (0,4) circle (2.5pt);
+
+% % axis names
+% \node[anchor=west] at (5, 0) {$x_1$};
+% \node[anchor=south] at (0, 4.5) {$x_2$};
+
+% \draw[->, semithick] (-1,0) -- (5, 0);
+% \draw[ultra thick] (0,0) -- (2, 0);
+
+% %dashed lines on x axes
+% \draw[dashed] (2,0) -- (2, 1); %node[anchor=north east] at (2,2) {$M$};
+% \draw[dashed] (4,0) -- (4, 1);
+% \draw[dashed] (1,0) -- (1, 1);
+
+% %dashed lines on y axes
+% \draw[dashed] (0,4) -- (1, 4); %node[anchor=north east] at (2,2) {$M$};
+% \draw[dashed] (0,2) -- (1, 2);
+% \draw[dashed] (0,1) -- (1, 1);
+% \draw[dashed] (2,2) -- (2, 4);
+
+% %thick lines on x axes
+% \draw[very thick] (1,1) -- (4, 1);
+% \draw[very thick] (1,4) -- (4, 4);
+% \draw[very thick] (1,2) -- (2, 2);
+
+% \draw[->, semithick] (0,-1) -- (0, 4.5);
+% % \draw[ultra thick] (0,2) -- (0, 6.5);
+
+% %thick lines on y axes
+% \draw[very thick] (1,1) -- (1, 4);
+% \draw[very thick] (4,1) -- (4, 4);
+% \draw[very thick] (2,1) -- (2, 2);
+% \end{tikzpicture}
+% \end{center}
+% \par Պարզ է, որ $f(X)=[1;4],\ f(A)=[1;2]$։
+% \par Բացի այդ՝ $f^{-1} (f(A))=\{ (x_1,x_2)\mid 1\leq x_1\leq 2,\ 1\leq x_2\leq 4\}$։ Ուրեմն ${A\subset f^{-1} (f(A))}$, ընդ որում $A\neq f^{-1} (f(A))$։ Ունենք նաև $f^{-1} (B)=\{(x_1,x_2)\mid 1\leq x_1\leq 2,\ {1\leq x_2\leq 4}\},\\ f^{-1} (f(B))=[1;2]$։ Նկատենք, որ $f(f^{-1} (B))\subset B$, բայց $f(f^{-1} (B))\neq B$։
+% \end{example}
+\begin{example}
+\label{օրինակ 1:7}
+Դիցուք $X$ և $Y$ բազմությունները կազմված են երկուական տարրերից՝ $X=\{x_1,x_2\},\ Y=\{y_1,y_2\}$։ Դիտարկենք $f:X\to Y$ արտապատկերում՝ սահմանելով $f(x_1)=f(x_2)=y_2$։
+\par Ընթերցողին առաջարկում ենք որպես օգտակար վարժանք գտնել $X$-ի բոլոր $4$ ենթաբազմությունների կերպարները $Y$-ում և $Y$-ի բոլոր $4$ ենթաբազմությունների նախակերպարները $X$-ում։
+\end{example}
+\begin{theorem} 
+Ամեն մի $f:X\rightarrow Y$ արտապատկերման և կամայական $X_1,X_2\subset X$ ենթաբազմությունների դեպքում
+\begin{align*}
+f(X_1\cup  X_2)=f(X_1)&\cup  f(X_2), \quad f(X_2),\ f(X_1\cap X_2)\subset {f(X_1)\cap f(X_2)},\\
+& {f(X_1)\setminus f(X_2)\subset f(X_1\setminus X_2)}։
+\end{align*}
+\end{theorem}
+\label{թեորեմ 1:1}
+\begin{proof}
+Ապացուցենք դրանցից երկրորդը՝
+% մյուսները թողնելով ընթերցողին․
+\begin{equation*}
+    \begin{aligned}
+    &y\in f(X_1\cap X_2)\ \Rightarrow \ (\exists x\in X_1\cap X_2 \textrm{ և } f(x)=y)\ \Rightarrow \ (x\in X_1,\ x\in X_2 \textrm{ և } f(x)=y)\ \Rightarrow \\ &\left(y\in f(X_1)\textrm{ և } y\in f(X_2)\right)\ \Rightarrow \ y\in f(X_1)\cap f(X_2):
+    \end{aligned}
+\end{equation*}
+Հետևաբար $f(X_1\cap X_2)\subset  f(X_1)\cap f(X_2)$:
+\end{proof}
+\par Նկատենք, որ ընդհանուր դեպքում $f(X_1\cap X_2)\neq f(X_1)\cap f(X_2)$։ Իրոք, \hyperref[օրինակ 1:7]{օրինակ 7}-ում վերցնելով $X_1=\{x_1\},\ X_2=\{x_2\}$ ստանում ենք $X_1\cap X_2=\varnothing$, ուստի $f(X_1\cap X_2)=\varnothing$, մինչդեռ $f(X_1)\cap f(X_2)=\{y_2\} \neq \varnothing$։ Հետևաբար տեղի չունի $f(X_1) \cap f(X_2) \subset f(X_1 \cap X_2)$ ներդրում։
+
+%դիտարկենք $A$ քառակուսին և $C=\{(x_1,x_2) \mid  1\leq x_1\leq 4; 3\leq x_2\leq 4 \}$ ուղղանկյունը օրինակ 5-ում։ Պարզ է, որ $A\cap C=\varnothing \Rightarrow f(A\cap C)=\varnothing $, մինչդեռ $f(A)\cap f(C)=[1;2]\cap [1;4]=[1;2]$։
+
+\par Նշենք, որ \hyperref[թեորեմ 1:1]{թեորեմ 1}-ում բերված առաջին երկու առնչությունները ճիշտ են $X$ բազ\-մու\-թյան են\-թա\-բազ\-մութ\-յուն\-ների կամայական $\{X_i; \, i\in I\}$ ինդեքսավորված ըն\-տա\-նիքի դեպքում՝
+\begin{equation*}
+    f \left(\mathsmaller{\bigcup}\limits_{i \in I} X_i \right)=\mathsmaller{\bigcup}\limits_{i \in I} f\left(X_i\right), \quad f\left(\mathsmaller{\bigcap}\limits_{i \in I} X_i \right)\subset \mathsmaller{\bigcap}\limits_{i \in I} f\left(X_i\right)
+\end{equation*}
+\begin{theorem}
+Կամայական $f:X\rightarrow Y$ արտապատկերման և $Y_1,Y_2 \subset Y$ ենթա\-բազմու\-թյունների դեպքում
+\begin{align*}
+f^{-1} (Y_1\cup Y_2)= f^{-1} &(Y_1)\cup f^{-1} (Y_2), \quad f^{-1} (Y_1\cap Y_2)=f^{-1} (Y_1)\cap f^{-1} (Y_2),\\
+& f^{-1} (Y_1\setminus Y_2)=f^{-1} (Y_1)\setminus f^{-1} (Y_2)։
+\end{align*}
+\end{theorem}
+\label{թեորեմ 1:2}
+\begin{proof}
+Ապացուցենք դրանցից առաջինը՝
+\[
+x\in f^{-1} (Y_1\cup Y_2)\Leftrightarrow f(x)\in Y_1\cup Y_2\Leftrightarrow \begin{sqcases}
+f(x)\in Y_1 \\
+f(x)\in Y_2
+\end{sqcases}\hspace{-1em} \Leftrightarrow
+\begin{sqcases}
+x\in f^{-1} (Y_1)\\
+x\in f^{-1} (Y_2)
+\end{sqcases}\hspace{-1em} \Leftrightarrow
+x\in f^{-1} (Y_1)\cup f^{-1} (Y_2)
+\]
+\end{proof}
+\par Նման ձևով ապացուցվում է, որ $Y$ բազմության ենթաբազմությունների կամա\-յա\-կան $\{Y_i; \, i \in I\}$ ինդեքսավորված ընտանիքի դեպքում
+\begin{equation} \label{eq:1.2}
+f^{-1} \left(\mathsmaller{\bigcup}\limits_{i \in I} Y_i \right)=\mathsmaller{\bigcup}\limits_{i \in I} f^{-1} (Y_i ),\quad f^{-1} \left(\mathsmaller{\bigcap}\limits_{i \in I} Y_i \right)=\mathsmaller{\bigcap}\limits_{i \in I} f^{-1} (Y_i)
+\end{equation}
+\begin{theorem}
+Կամայական $f:X\rightarrow Y$ արտապատկերման և $A\subset X,\ B\subset Y$ ենթաբազմությունների դեպքում
+\begin{equation} \label{eq:1.3}
+    f(f^{-1} (B))\subset B,\quad A\subset f^{-1}(f(A))
+\end{equation}
+\end{theorem}
+\label{թեորեմ 1:3}
+\begin{proof}
+Իրոք, $y\in f(f^{-1} (B))\Rightarrow (\exists x\in f^{-1} (B)$, որ $f(x)=y) \ \Rightarrow {(f(x)\in B)} \\ \Rightarrow \ y\in B$: Հետևաբար $f(f^{-1} (B))\subset B$։ Նման ձևով՝ $x\in A \ \Rightarrow \ (f(x)\in f(A)) \ \Rightarrow \ x\in f^{-1} (f(A))$: Հետևաբար $A\subset f^{-1} (f(A))$:
+\end{proof}
+\par Վերը բերված \hyperref[օրինակ 1:7]{օրինակ 7}-ում վերցնելով $A=\{x_1\},\ 
+B=\{y_1,y_2\}$՝ համոզվում ենք, որ ընդհանուր դեպքում $\eqref{eq:1.3}$ բանաձևերում ներդրման $\subset$ նշանները չեն կարող փոխարինվել համընկնման $=$ նշանով։
+\begin{definition}
+$f:X\rightarrow Y$ արտապատկերումը կոչվում է \textbf{ներդիր} կամ \textbf{ինյեկտիվ} արտա\-պատ\-կերում, եթե $X$-ի $\forall\, x_1\neq x_2$ տարրերի դեպքում $f(x_1)\neq f(x_2)$։ Այնուհետև, $f:X\rightarrow Y$ արտապատկերումը կոչվում է \textbf{վրադիր} կամ \textbf{սյուրյեկտիվ} արտա\-պատ\-կե\-րում, եթե $\forall\, y\in Y$ տարրի համար $\exists\, x \in X$ տարր, որ $f(x)=y$։
+\end{definition}
+\par Նշենք, որ արտապատկերման սյուրյեկտիվությունը համարժեք է $f(X)=Y$ համընկնմանը։
+\par Նկատենք, որ \hyperref[օրինակ 1:7]{օրինակ 7}-ում բերված $f$ արտապատկերումը ոչ ինյեկտիվ է և ոչ էլ սյուրյեկտիվ է։
+\par
+Միաժամանակ ինյեկտիվ և սյուրյեկտիվ արտապատկերումը կոչվում է \textbf{բիյեկտիվ} կամ \textbf{փոխմիարժեք} արտապատկերում։
+\par Ցանկացած $X$ բազմության համար $x\mapsto x,\ x\in X$ համապատասխանությունը որոշում է $X\rightarrow X$ փոխմիարժեք արտապատկերում։ Այն կոչվում է $X$-ի \textbf{նույնական արտապատկերում} և նշանակվում է $\id$ կամ $\nuynakan_X$ սիմվոլներով։
+
+% ավելացված
+\begin{example}
+Ամբողջ թվերի $\Z$ բազմության $f : \Z \rightarrow \Z$ արտապատկերումը՝ սահմանված $f(n)=n+1$ բանաձևով, փոխմիարժեք է (հիմնավորե՛լ) և տարբեր է $\nuynakan_\Z$ նույնական արտապատկերումից։
+\end{example}
+
+\par Ամեն մի փոխմիարժեք $f:X\rightarrow Y$ արտապատկերման համար սահմանվում է նրա \textbf{հակադարձ} $f^{-1}:Y\rightarrow X$  արտապատկերումը․ որպես $\forall y\in Y$ տարրի $f^{-1}(y)$ կերպար սահմանվում է $X$-ի այն $x$ տարրը, որ $f(x)=y$։
+\begin{example}
+Ցույց տանք, որ գոյություն ունի փոխմիարժեք արտապատկե\-\linebreak րում $(-1,1)\rightarrow(-\infty,\infty)$։ Այն կարող է սահմանվել անալիտիկորեն $f(t)=\tg \dfrac{\pi}{2} t$, \linebreak ${t \in (-1,1)}$ բանաձևով, կամ երկրաչափորեն՝ ստորև նկարագրվող եղանակով։ Գծա\-գրում $(-\infty,\infty)$ թվային ուղիղը պատկերված է որպես $OX$ կոորդինատային առանցք։ \linebreak
+\begin{center}
+\includegraphics[scale=0.6]{images/id 3.png}
+\end{center}
+Դիտարկենք $M(0,1)$ կենտրոնով և $1$ շառավղով կիսաշրջանագիծ առանց իր երկու $A(-1,1)$ և $B(1,1)$ ծայրակետերի։ Այժմ կամայական $t\in (-1,1)$ կետի $g(t)$ կերպարը ստանալու համար $t$ կետից ուղղահայաց բարձրանում ենք մինչև կիսաշրջանագծի $T$ կետը և ապա գտնում ենք $g(t)\in (-\infty,+\infty)$ կետը՝ որպես $MT$ ճառագայթի հատման կետ $OX$ առանցքի հետ։ Առաջարկում ենք ընթերցողին ինքնուրույն համոզ\-վել, որ վերը սահ\-ման\-ված $f, g : (-1,1)\rightarrow (-\infty,+\infty)$ արտապատկերումները փոխ\-միարժեք են, ինչպես նաև նկարագրել նրանց հակադարձ արտապատկերումները։ Նկատենք նաև, որ $f$-ը և $g$-ն նույնը չեն։
+\end{example}
+\par Եթե ունենք $f:X\rightarrow Y$ և $g:Y\rightarrow Z$ արտապատկերումներ, ապա սահմանվում է նրանց $g\circ f:X\rightarrow Z$ \textbf{համադրույթ} $(g\circ f)(x)=g(f(x))$ բանաձևով։
+\par Եթե $f:X\rightarrow Y$ փոխմիարժեք արտապատկերում է, ապա ինչպես արդեն գիտենք, գոյություն ունի նրա հակադարձ $f^{-1}:Y\rightarrow X$ արտապատկերումը և իմաստ ունեն $f^{-1} \circ f$ և $f\circ f^{-1}$ համադրույթները։ Հեշտ է տեսնել, որ 
+\[
+f^{-1} \circ f=\nuynakan_X,\quad f\circ f^{-1}=\nuynakan_Y։
+\]
+\par Ցանկացած $f:X\rightarrow Y,\ g:Y\rightarrow Z, \ h:Z\rightarrow T$ արտապատկերումների դեպքում իմաստ ունեն $(h\circ g)\circ f$ և $h\circ (g\circ f)$ համադրույթները, որոնք որոշում են միևնույն $X\rightarrow T$ արտապատկերումը՝ $(h\circ g)\circ f=h\circ (g\circ f)$։ 
+% ավելացված
+Իրոք, նշանակելով $h\circ g$ և $g\circ f$ համադրույթները համապատասխանաբար $u$ և $v$, ցանկացած $x\in X$ տարրի համար կունենանք՝
+\[
+\begin{aligned}
+& ((h \circ g) \circ f)(x)=(u \circ f)(x)=u(f(x))=(h \circ g)(f(x))=h(g(f(x))), \\
+& ((h \circ(g \circ f))(x)=(h \circ v)(x)=h(v(x))=h((g \circ f)(x))=h(g(f(x)):
+\end{aligned}
+\]
+Հետևաբար՝ $(h \circ g) \circ f=h \circ(g \circ f)$։
+
+\newpage % զուտ որովհետև էջի վերջում ա
+\input{Թեմա 1_Խնդիրներ}
+
+\end{document}
