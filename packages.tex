@@ -66,6 +66,8 @@
 %\usepackage{icomma} % "խելացի" ստորակե, $0,2$ --- թիվ, $0, 2$ --- թվարկում
 \usepackage{mathrsfs} % Սիրուն տառատեսակ
 \usepackage{nicefrac}
+\usepackage{mathrsfs} % Ձեռագիր փոքրատառ պոչիկով s
+
 
 % գույներ, գծագրեր
 \usepackage{tikz}
@@ -153,11 +155,30 @@
 \newtheorem*{hetevanq}{Հետևանք}
 \newtheorem{hetevanq_counter}{Հետևանք}
 
-
 \usepackage{setspace}
 
 \renewcommand\qedsymbol{$\blacksquare$}
 \renewcommand*{\proofname}{\hspace{18pt}\textbf{Ապացուցում:}}
+
+
+% Proof environment without heading ("Ապացուցում:")
+\makeatletter
+\newenvironment{varproof}{%
+  \par
+  \pushQED{\qed}%
+  \normalfont
+  \topsep6\p@\@plus6\p@\relax
+  \trivlist
+  \item\relax
+  \hspace{18pt}
+  \ignorespaces
+}{%
+  \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+
+
+
 
 \newtheoremstyle{theoremdd}% name of the style to be used
 {}% measure of space to leave above the theorem. E.g.: 3pt

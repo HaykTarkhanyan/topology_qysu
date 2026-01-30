@@ -1,0 +1,66 @@
+\documentclass[tikz,border=5mm]{standalone}
+
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.15]
+
+% ---------- parameters ----------
+\def\R{2.6}
+\def\angTop{15}
+\def\angBot{7}
+\def\angLeft{80}
+\def\angRight{100}
+
+% ---------- coordinates ----------
+\coordinate (O)      at (0,0);
+\coordinate (Ttop)   at ({\angTop+90}:\R);
+\coordinate (Tbot)   at ({\angBot-90}:\R);
+\coordinate (Tleft)  at ({\angLeft+90}:\R);
+\coordinate (Tright) at ({\angRight-90}:\R);
+
+% ---------- styles ----------
+\tikzset{
+  main/.style={draw=black!90,line width=1.2pt},
+  dot/.style ={fill=black!80,draw=black!80,line width=0.6pt}
+}
+
+% ---------- circle ----------
+\draw[main] (O) circle (\R);
+\fill (O) circle (2pt);
+
+% ---------- tangents ----------
+% top (long)
+\draw[main,rotate around={\angTop:(Ttop)}]
+  ($(Ttop)+(-2.5,0)$) -- ($(Ttop)+(3,0)$);
+
+% bottom (SHORTENED)
+\draw[main,rotate around={\angBot:(Tbot)}]
+  ($(Tbot)+(-2.2,0)$) -- ($(Tbot)+(2.2,0)$);
+
+% left (unchanged)
+\draw[main,rotate around={\angLeft:(Tleft)}]
+  ($(Tleft)+(-2.0,0)$) -- ($(Tleft)+(2.8,0)$);
+
+% right (SHORTENED)
+\draw[main,rotate around={\angRight:(Tright)}]
+  ($(Tright)+(-1.9,0)$) -- ($(Tright)+(2.1,0)$);
+
+% ---------- contact points ----------
+\fill[dot] (Ttop)   circle (2.6pt);
+\fill[dot] (Tbot)   circle (2.6pt);
+\fill[dot] (Tleft)  circle (2.6pt);
+\fill[dot] (Tright) circle (2.6pt);
+
+% ---------- labels ----------
+\node at ($(Tright)+(0.38,0)$) {\fontsize{16}{28}\selectfont $s$};
+
+% larger l_s, moved left toward the circle
+\node at ($(Tright)+(0.12,1.9)$) {\fontsize{20}{24}\selectfont $l_s$};
+
+\end{tikzpicture}
+
+\end{document}
