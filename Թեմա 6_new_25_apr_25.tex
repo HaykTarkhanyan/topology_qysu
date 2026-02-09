@@ -16,6 +16,7 @@
 
 Դիցուք $(X, \tau)$-ն տոպոլոգիական տարածություն է, $A$-ն $X$-ի որևէ ենթաբազմու\-թյուն է։
 
+% definition 1
 \begin{definition}
 $x \in X$ կետը կոչվում է $A$ \textbf{ենթաբազմության ներքին կետ}, եթե գոյություն ունի $x$-ի որևէ $U_x$ շրջակայք, որ $x\in U_x \subset A$։ Տվյալ $A$ ենթաբազմության բոլոր ներքին կետերի բազմությունը կոչվում է $A$-ի \textbf{ներքինը} և նշանակվում է $\inter A$։
 \end{definition}
@@ -31,6 +32,7 @@ $x \in X$ կետը կոչվում է $A$ \textbf{ենթաբազմության ն
     \item $A \mapsto \inter A$ համադրումը գործողություն է որոշված $X$-ի բոլոր ենթաբազմու\-թյուն\-ների բազմության վրա։ Մասնավորապես $ \inter\varnothing=\varnothing,\ \inter X=X$։ Այդ գործողությունը բնութագրում է $X$-ի բաց ենթաբազմությունները հետևյալ \linebreak իմաստով․ \textbf{$X$-ի որևէ ենթաբազմություն բաց ենթաբազմություն է այն և միայն այն դեպքում, երբ այն համընկնում է իր ներքինի հետ։} Իրոք, եթե $A$-ն բաց ենթաբազմություն է, ապա $A=\inter A$ ըստ ներքինի սահմանման։ Հակառակը՝ եթե $A= \inter A$, ապա $A$-ն բաց ենթաբազմություն է ըստ հատկու\-թյուն 1-ի։
 \end{enumerate}
 
+% example 1
 \begin{nexamples}
 $(X,\textrm{դիսկր․})$ տարածությունում ցանկացած $A \subset X$ ենթաբազմու\-թյան ներքինը $A$-ն է։ Իսկ $(X, \textrm{անտիդ․})$-ում $\inter A=X$, երբ $A=X$, և $\inter A=\varnothing$, երբ $A \neq X$։ Այնուհետև, $(\R, \textrm{սովոր․})$ տարածությունում $(a,b),\ [a,b),\ (a,b],\ [a,b]$ ենթաբազմությունների ներքինները $(a,b)$-ն է, իսկ ամբողջ թվերի $\Z$, ռացիոնալ թվերի $\Q$, իռացիոնալ թվերի $I$ բազմությունների ներքինները $\varnothing$ բազմությունն է, $(\R, \textrm{հաշվ․ լր․})$ տարածությունում $\inter \Z= \inter \Q=\varnothing$, իսկ $\inter I=I$ (հիմնավորե՛ք)։
 \end{nexamples}
@@ -42,6 +44,7 @@ $(X,\textrm{դիսկր․})$ տարածությունում ցանկացած $A 
     \item[4.] Եթե $A \subset B \subset X$, ապա $\inter A \subset \inter B$ (հետևում է սահմանումից)։ 
     
     \item[5.] Ցանկացած $A, B \subset X$ ենթաբազմությունների դեպքում $ \inter(A \cap B)=\inter A \cap \inter B$։
+    % proof 1
     \begin{proof} 
     Ունենք՝ $A \cap B \subset A \ \Rightarrow\ \inter(A\cap B)\subset \inter A$։ Նման ձևով $\inter(A\cap B)\subset \inter B\ \Rightarrow\ \inter(A\cap B)\subset(\inter A)\cap( \inter B)$։ Հակառակը՝ 
     \begin{equation*}
@@ -61,6 +64,7 @@ $(X,\textrm{դիսկր․})$ տարածությունում ցանկացած $A 
     \end{equation*}
     \end{proof}
     
+    % proof 2
     \item[6.] Ցանկացած $A,B\subset X$ ենթաբազմությունների դեպքում $(\inter A)\cup(\inter B)\subset \inter(A\cup B)$։
     \begin{proof} 
     Ունենք՝ $A \subset A \cup B,\ B \subset A \cup B \Rightarrow (\inter A,\ \inter B \subset \inter (A \cup B)) \Rightarrow( \inter A) \cup (\inter B) \subset \inter(A \cup B)$։ Նկատենք, որ ընդհանուր դեպքում $(\inter A) \cup (\inter B) \neq \inter(A \cup B)$։ Որպես օրինակ՝ $(\R,\textrm{ սովոր․})$-ում դիտարկենք $A=\Q$ և $B=I$ ենթաբազմությունները։ Մի կողմից՝ $\inter \Q= \inter I= \varnothing \Rightarrow \inter \Q \cup \inter I=\varnothing$, իսկ մյուս կողմից $\inter(\Q \cup I)= \inter \R=\R$։
@@ -82,10 +86,12 @@ X = \inter A \cup \exter A \cup \partial A
 \]
 
 Այժմ $\partial A = X \setminus ({\inter A}  \cup {\exter A})$ նույնությունից հետևում է՝ $X$-ի ցանկացած ենթա\-բազմության եզրը փակ ենթաբազմություն է։
-
+% example 2
 \begin{example} \label{Օրինակ 1։}
 Դիցուք $A$-ն հետևյալ $(0,1),[0,1), (0,1], [0,1]$ ենթաբազմություններից որևէ մեկն է թվային ուղղի սովորական տոպոլոգիայում։ Ապա $ \inter A = (0, 1)$, $\exter A = (-\infty, 0) \cup (1, +\infty)$, $ \partial A = \{0, 1\}$ (\textbf{հիմնավորե՛ք})։
 \end{example}
+
+% example 3\end{example}
 
 \begin{example} \label{Օրինակ 2։}
 Դիցուք $A$-ն նախորդ օրինակում բերված ենթաբազմություններից որևէ մեկն է թվային ուղղի աջից կիսաբաց ինտերվալների տոպոլոգիայում։ Դրան\-ցից $A = (0,1)$ դեպքում $\inter A = (0,1)$, $\exter A = (-\infty,0) \cup [1,+\infty)$, $ \partial A = \{0\}$, իսկ $A=[0,1]$ դեպքում  $\inter A = [0,1)$, $\exter A = (-\infty,0) \cup [1,+\infty)$, $\partial A = \varnothing $։
@@ -95,22 +101,26 @@ X = \inter A \cup \exter A \cup \partial A
 
 Այժմ անդրադառնանք տոպոլոգիական տարածության փակ ենթաբազմության հասկացությանը։
 
-Նախորդ՝ թեմա $5$-ում փակ ենթաբազմությունները սահմանվեցին բաց ենթա\-բազմությունների միջոցով։ Այժմ ցույց տանք, թե ինչպես են նկարագրվում փակ ենթաբազմությունները կետերի շրջակայքերի տերմիններով։
-
+% definition 2
 \begin{definition} 
 $(X,\tau)$ տոպոլոգիական տարածությունում $x\in X$ կետը կոչվում է $M\subset X$ \textbf{ենթաբազմության հպման կետ}, եթե այդ կետի ցանկացած շրջակայք ունի ոչ դատարկ հատում $M$-ի հետ։ 
 \end{definition}
 
+% note 1
 \begin{note}
 Մաթեմատիկական անալիզի դասընթացներում գործածվում է նաև \textbf{ենթաբազմության սահմանային կետ} հասկացությունը։ 
 
 Այս դեպքում պահանջվում է, որպեսզի $x$ կետի ցանկացած շրջակայք ունենա ոչ դատարկ հատում $M\setminus \{x\}$ ենթաբազմության հետ։ Պարզ է, որ ենթաբազմության ամեն մի սահմանային կետ նաև նրա հպման կետ է։ Հակառակը ընդհանուր դեպքում ճիշտ չէ։ Օրինակ՝ $\forall (X,\tau)$ տարածությունում ցանկացած $x$ կետ հպման կետ է $\{x\}$ ենթաբազմության համար, բայց սահմանային կետ չէ նրա համար։
 \end{note}
 
+% definition 3
 \begin{definition} 
 $M\subset X$ ենթաբազմության բոլոր հպման կետերի բազմությունը կոչվում է այդ \textbf{ենթաբազմության փակույթ} և նշանակվում է $\widebar{M}$։
 
 Անցումը $M$ ենթաբազմությունից $\widebar{M}$-ին, այսինքն $M\mapsto \widebar{M}$ համադրումը կոչվում է \textbf{փակման գոր\-ծո\-ղու\-թյուն տոպոլոգիական տարածությունում}։
+\end{definition}
+
+% example 4Անցումը $M$ ենթաբազմությունից $\widebar{M}$-ին, այսինքն $M\mapsto \widebar{M}$ համադրումը կոչվում է \textbf{փակման գոր\-ծո\-ղու\-թյուն տոպոլոգիական տարածությունում}։
 \end{definition}
 
 \begin{example}
@@ -129,39 +139,48 @@ $M\subset X$ ենթաբազմության բոլոր հպման կետերի բ�
     \item $ M\subset \widebar{M}$ ցանկացած $M$ ենթաբազմության դեպքում;
     \item եթե $M\subset N$, ապա $\widebar{M} \subset \widebar{N}$;
     \item ցանկացած $M\subset X$ ենթաբազմության դեպքում $\widebar{\widebar{M}}=\widebar{M}$ (այստեղ $\widebar{\widebar{M}}$ սիմվոլով նշանակված է $\widebar{M}$-ի փակույթը, այսինքն $\widebar{M} = \widebar{(\widebar{M})}$)։
-\end{enumerate}
-
-Սրանցից 1-ը, 2-ը և 3-ը ակնհայտ են, ապացուցենք 4-ը։ Ըստ 2-ի՝ $\widebar{M}\subset \widebar{\widebar{M}}$, ուստի մնում է ցույց տալ, որ $\widebar{\widebar{M}}\subset \widebar{M}$։ Դիտարկենք կամայական $x\in \widebar{\widebar{M}}$ կետ։ Այն հպման կետ է $\widebar{M}$-ի համար։ Ցույց տանք, որ $x$-ը հպման կետ է նաև $M$-ի համար։ Եթե $U$-ն $x$-ի որևէ բաց շրջակայք է, ապա $U\cap \widebar{M} \neq \varnothing$, և հետևաբար գոյություն ունի $y\in X$ կետ, որ $y\in U$ և $y\in \widebar{M}$։ Ստացվում է, որ $y$-ը հպման կետ է $M$-ի համար։ Քանի որ $U$-ն նաև $y$-ի շրջակայք է, ուստի $U\cap M\neq \varnothing$, և ուրեմն $x\in \widebar{M}$։ Այսպիսով $\widebar{\widebar{M}} \subset \widebar{M}$։
-
+% note 2
 \begin{note} 
 Բերված ապացույցում մենք վերցրինք $x$ կետի ոչ թե կամայա\-կան $U$ շրջակայք, այլ կամայական $U$ \textbf{բաց} շրջակայք։ Առաջարկում ենք ընթերցողին նախ պարզել, թե ինչը ստիպեց այդպես վարվել, և ապա հիմնավորել, որ դրանով չի խախտվել ապացույցի լիարժեքությունը։
 \end{note}
 
+% theorem 1
 \begin{theorem}
 $X$ տոպ․ տարածության $M$ ենթաբազմությունը փակ ենթաբազմու\-թյուն է այն և միայն այն դեպքում, երբ $M$-ը պարունակում է իր բոլոր հպման կետերը։ 
 \end{theorem}
 
-\begin{proof}
-    ա) Եթե $M$-ը փակ է $\Rightarrow (X \setminus M)$-ը բաց է $\Rightarrow (X \setminus M)$-ում չկան $M$-ի հպման կետեր $\Rightarrow M$-ի հպման կետերը $M$-ում են $\Rightarrow \widebar{M} \subset M$։
-
-    \par բ) Եթե $\widebar{M} \subset M\ \Rightarrow\ (X \setminus M)$-ում $M$-ի հպման կետեր չկան $\Rightarrow \forall x \in X \setminus M$ կետ հպման կետ չէ $M$-ի համար $\Rightarrow \forall x \in X \setminus M$ կետի համար $\exists x$-ի $U_{x}$ (բաց) շրջակայք, որ $U_{x} \subset (X \setminus M)$։ Այսպիսով $(X \setminus M)$-ը շրջակայք է իր բոլոր կետերի համար $\Rightarrow (X \setminus M)$-ը բաց ենթաբազմություն է $\Rightarrow M$-ը փակ ենթաբազմություն է։
-\end{proof}
-
+% proof 3
+\begin{theorem}
+$X$ տոպ․ տարածության $M$ ենթաբազմությունը փակ ենթաբազմու\-թյուն է այն և միայն այն դեպքում, երբ $M$-ը պարունակում է իր բոլոր հպման կետերը։ 
+\end{theorem}
+% corollary 1
 \begin{hetevanq_counter} 
 $M \subset X$ ենթաբազմությունը փակ է այն և միայն այն դեպքում, երբ համընկնում է իր փակույթի հետ՝ $M = \widebar{M}$։
 \end{hetevanq_counter}
 
+% corollary 2
 \begin{hetevanq_counter} 
 Ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը $X$-ի փակ ենթաբազմություն է։ Իրոք, քանի որ $\widebar{\widebar{M}} = \widebar{M}$ ըստ հատկություն 4-ի, ուստի $\widebar{M}$-ը փակ ենթաբազմություն է համաձայն հետևանք 1-ի։
 \end{hetevanq_counter}
 
+% theorem 2
 \begin{theorem} 
 Ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը համընկնում է $M$-ը ընդգրկող բոլոր փակ ենթաբազմությունների հատման հետ։ Այսինքն ${\widebar{M} = \bigcap F}$, որտեղ հատումը կատարվում է ըստ այն բոլոր $F \subset X$ փակ ենթաբազմությունների, որ $M \subset F$։
 \end{theorem}
 
-\begin{proof} 
-Մի կողմից՝ եթե $F$-ը փակ է և $M \subset F$, ապա $\widebar{M} \subset \widebar{F} = F$, ուստի $\widebar{M} \subset \bigcap F$։ Մյուս կողմից՝ քանի որ $M \subset \widebar{M}$ և $\widebar{M}$-ը փակ է, ուստի $F$ փակ ենթաբազմություններից մեկը $\widebar{M}$-ն է։ Հետևաբար $\bigcap F \subset \widebar{M}$, և ուրեմն $\widebar{M} = \bigcap F$։
-\end{proof}
+% proof 4\begin{hetevanq_counter} 
+Ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը $X$-ի փակ ենթաբազմություն է։ Իրոք, քանի որ $\widebar{\widebar{M}} = \widebar{M}$ ըստ հատկություն 4-ի, ուստի $\widebar{M}$-ը փակ ենթաբազմություն է համաձայն հետևանք 1-ի։
+\end{hetevanq_counter}
+
+\begin{theorem} 
+% theorem 3
+\begin{theorem}
+\label{թեորեմ 3}
+Ցանկացած $M, N \subset X$ ենթաբազմությունների դեպքում տեղի ունի
+$\widebar{M \cup N} = \widebar{M} \cup \widebar{N}$ համընկում։
+\end{theorem}
+
+% proof 5\end{proof}
 
 \begin{theorem}
 \label{թեորեմ 3}
@@ -184,6 +203,7 @@ M \subset M \cup N,\ N \subset M \cup N \ \Rightarrow\ \widebar{M} \subset \wide
 
 \par Այս ամենից հետո պատրաստ ենք ծանոթանալու կամայական բազմության վրա տոպոլոգիա սահմանելու ևս մի հիմնական եղանակի հետ։
 
+% definition 4
 \par Վերը $(X, \tau)$ տոպոլոգիական տարածության ամեն մի $M \subset X$ ենթաբազմության համար սահմանվեց $\widebar{M}$ փակ ենթաբազմություն ($M$-ի փակույթը $\tau$ տոպոլոգիայում)։ Այդ $M \mapsto \widebar{M}$ համադրումը կոչվում է \textbf{փակման գործողություն տոպոլոգիական տարածությունում}։ Այն օժտված է վերը դիտարկված որոշակի հատկություններով։
 
 % Այդ $M\mapsto\widebar{M}$ համադրումը կոչվում է \textbf{փակման գործողություն տոպո\-լոգիական տա\-րա\-ծութ\-յու\-նում}։ Այն օժտված է վերը դիտարկված որոշակի հատկություններով։
@@ -194,13 +214,7 @@ M \subset M \cup N,\ N \subset M \cup N \ \Rightarrow\ \widebar{M} \subset \wide
 Դիցուք ինչ-որ եղանակով $X$ բազմության ամեն մի $M$ ենթաբազ\-մության համադրված է $X$-ի ինչ-որ ենթաբազմություն, որը նշանակվում է $\cl M$ ($\cl$-ն ֆրանսերեն clôture — փակում բառի կրճատն է), այնպես, որ բավարարվում են հետևյալ 4 պահանջները․
 \begin{itemize}
     \item[K1.] $\cl \varnothing = \varnothing$;
-    \item[K2.] $M \subset \cl M$;
-    \item[K3.] $\cl(\cl M) = \cl M$;
-    \item[K4.] $\cl(M \cup N) = \cl M \cup \cl N$, ցանկացած $M, N \subset X$ ենթաբազմությունների դեպքում։
-\end{itemize}
-\par Ամեն մի այսպիսի գործողություն կոչվում է Կուրատովսկու \textbf{փակման գործո\-ղու\-թյուն բազմության վրա}։
-\end{definition}
-
+% lemma 1
 \begin{lemma}
 1-4 աքսիոմներից հետևում է՝ 
 \begin{itemize}
@@ -209,11 +223,21 @@ M \subset M \cup N,\ N \subset M \cup N \ \Rightarrow\ \widebar{M} \subset \wide
 \end{itemize}
 \end{lemma}
 
-\begin{proof}
-ա) Մի կողմից, ըստ K2-ի $X \subset \cl X$, իսկ մյուս կողմից ակնհայտ է, որ $ \cl X \subset X$։ Ուստի $ \cl X = X$;
+% proof 6\begin{lemma}
+1-4 աքսիոմներից հետևում է՝ 
+\begin{itemize}
+    \item[ա)] $\cl X = X$;
+    \item[բ)] եթե $A \subset B \subset X$, ապա $\cl A \subset \cl B$։
+\end{itemize}
+\end{lemma}
 
-\par բ) $A \subset B\ \Rightarrow\ (B = A \cup (B \setminus A))\ \Rightarrow\ (\cl B = \cl A \cup \cl(B \setminus A))\ \Rightarrow\ (\cl A \subset \cl B)$։
-\end{proof}
+\begin{proof}
+% theorem 4
+\begin{theorem}[(K. Kuratowski, 1922)]
+$X$ բազմության վրա տրված Կուրատովսկու փակման գործողությունը որոշում է տոպոլոգիա $X$-ի վրա։ Ընդ որում՝ ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը այդ տոպոլոգիայում համընկնում է $\cl M$-ի հետ՝ $\widebar{M} = \cl M$։
+\end{theorem}
+
+% proof 7\end{proof}
 
 \begin{theorem}[(K. Kuratowski, 1922)]
 $X$ բազմության վրա տրված Կուրատովսկու փակման գործողությունը որոշում է տոպոլոգիա $X$-ի վրա։ Ընդ որում՝ ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը այդ տոպոլոգիայում համընկնում է $\cl M$-ի հետ՝ $\widebar{M} = \cl M$։
