@@ -1,7 +1,7 @@
 
 1. Tema 1 - Submitted ✅
 2. Tema 2 - Submitted ✅
-3. Tema 3 - Needs Review 🕵️
+3. Tema 3 - Reviewed 🟡
 4. Tema 4 - Needs Review 🕵️
 5. Tema 5 - Needs Review 🕵️
 6. Tema 6 - Needs Review 🕵️
@@ -9,7 +9,7 @@
 8. Tema 8 - Needs Review 🕵️
 9. Tema 9 - Needs Review 🕵️
 10. Tema 10 - Needs Review 🕵️
-11. Tema 11 - Not Started ⏳
+11. Tema 11 - Needs Review 🕵️
 12. Tema 12 - Not Started ⏳
 13. Tema 13 - Not Started ⏳
 14. Tema 14 - Not Started ⏳
@@ -19,5 +19,6 @@
 
 
 Num Submitted: 2
+Num Reviewed: 1
 Num Needs Review: 8
-Num Not Started: 7 
+Num Not Started: 6 
