@@ -1,9 +1,9 @@
 
 1. Tema 1 - Submitted ✅
 2. Tema 2 - Submitted ✅
-3. Tema 3 - Reviewed 🟡
-4. Tema 4 - Needs Review 🕵️
-5. Tema 5 - Needs Review 🕵️
+3. Tema 3 - Submitted ✅
+4. Tema 4 - Submitted ✅
+5. Tema 5 - Submitted ✅
 6. Tema 6 - Needs Review 🕵️
 7. Tema 7 - Needs Review 🕵️
 8. Tema 8 - Needs Review 🕵️
