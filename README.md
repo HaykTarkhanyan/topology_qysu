@@ -13,7 +13,7 @@
 12. Tema 12 - Needs Review 🕵️
 13. Tema 13 - Not Started ⏳ (help us God)
 14. Tema 14 - Not Started ⏳ (aaaaaa)
-15. Tema 15 - Not Started ⏳ (okayish)
+15. Tema 15 - Needs Review 🕵️
 16. Tema 16 - Needs Review 🕵️
 17. Tema 17 - Not Started ⏳ (a ton of text but doable)
 18. References - Not Started ⏳
@@ -21,5 +21,5 @@
 
 Num Submitted: 8
 Num Reviewed: 0
-Num Needs Review: 3
-Num Not Started: 5
+Num Needs Review: 5
+Num Not Started: 3
