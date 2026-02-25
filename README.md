@@ -4,22 +4,22 @@
 3. Tema 3 - Submitted ✅
 4. Tema 4 - Submitted ✅
 5. Tema 5 - Submitted ✅
-6. Tema 6 - Need to submit 🟡
-7. Tema 7 - Need to submit 🟡
-8. Tema 8 - Needs Review 🕵️
-9. Tema 9 - Needs Review 🕵️
+6. Tema 6 - Submitted ✅
+7. Tema 7 - Submitted ✅
+8. Tema 8 - Submitted ✅
+9. Tema 9 - Need to submit 🟡
 10. Tema 10 - Needs Review 🕵️
 11. Tema 11 - Needs Review 🕵️
 12. Tema 12 - Needs Review 🕵️
 13. Tema 13 - Not Started ⏳ (help us God)
 14. Tema 14 - Not Started ⏳ (aaaaaa)
 15. Tema 15 - Not Started ⏳ (okayish)
-16. Tema 16 - Not Started ⏳ (easy)
+16. Tema 16 - Needs Review 🕵️
 17. Tema 17 - Not Started ⏳ (a ton of text but doable)
 18. References - Not Started ⏳
 
 
-Num Submitted: 5
+Num Submitted: 8
 Num Reviewed: 0
-Num Needs Review: 5
-Num Not Started: 4 
+Num Needs Review: 3
+Num Not Started: 5
