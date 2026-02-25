@@ -12,7 +12,7 @@
 11. Tema 11 - Needs Review 🕵️
 12. Tema 12 - Needs Review 🕵️
 13. Tema 13 - Not Started ⏳ (help us God)
-14. Tema 14 - Not Started ⏳ (aaaaaa)
+14. Tema 14 - Needs Review 🕵️
 15. Tema 15 - Needs Review 🕵️
 16. Tema 16 - Needs Review 🕵️
 17. Tema 17 - Not Started ⏳ (a ton of text but doable)
