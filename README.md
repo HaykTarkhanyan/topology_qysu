@@ -11,13 +11,14 @@
 10. Tema 10 - Needs Review 🕵️
 11. Tema 11 - Needs Review 🕵️
 12. Tema 12 - Needs Review 🕵️
-13. Tema 13 - Not Started ⏳ (help us God)
+13. Tema 13 - Needs Review 🕵️
 14. Tema 14 - Needs Review 🕵️
 15. Tema 15 - Needs Review 🕵️
 16. Tema 16 - Needs Review 🕵️
-17. Tema 17 - Not Started ⏳ (a ton of text but doable)
-18. References - Not Started ⏳
+17. Tema 17 - Needs Review 🕵️
+18. References - Needs Review 🕵️
 
+!!! Some 3D Plot tasks not done !!!
 
 Num Submitted: 8
 Num Reviewed: 0
