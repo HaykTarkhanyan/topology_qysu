@@ -8,7 +8,7 @@
 \item Եթե ունենք $(X, \rho)$ մետրիկ տարածություն, ապա ամեն մի ոչ դատարկ $A \subseteq X$ ենթատարածության վրա կարելի է սահմանել տոպոլոգիա երկու եղանակով:
 \par Առաջին դեպքում դիտարկենք $\rho$ մետրիկի $\rho|_A$ սահմանափակումը $A$-ի վրա և վերցնենք $\rho|_A$ մետրիկով որոշված $\tau[\rho|_A]$ մետրիկական տոպոլոգիան:
 \par Երկրորդ դեպքում դիտարկենք $X$-ի $\tau[\rho]$ մետրիկական տոպոլոգիան և վերցնենք նրանով մակածված $\tau[\rho]_A$ տոպոլոգիան $A$-ի վրա:
-\par Հարց: Նու՞յնն են արդյոք միշտ $\tau[\rho|_A]$ և $\tau[\rho]_A$ տոպոլոգիաները:
+\par \textbf{Հարց:} Նու՞յնն են արդյոք միշտ $\tau[\rho|_A]$ և $\tau[\rho]_A$ տոպոլոգիաները:
 \par Լուծում: Պատասխանը գրեթե ակնհայտ դրական է, իսկ ապացույցը կապված է պարզ սահմանումների մակարդակի:
 
 % 12.2
@@ -23,22 +23,329 @@
 \end{enumerate}
 
 \begin{hint}
-Դիտարկեք $f: (a, b) \to (c, d) \quad f(x) = c + \frac{d-c}{b-a}(x-a)$ շարունակական արտապատկերումը և օգտվելով 1, 2 օրինակներից կիրառելի թեորեմ 6-ը թեմա 11-ում:
+Դիտարկեք $f: (a, b) \to (c, d) \quad f(x) = c + \frac{d-c}{b-a}(x-a)$ անընդհատ արտապատկերումը և օգտվելով 1, 2 օրինակներից կիրառեք թեորեմ 6-ը թեմա 11-ում:
 \end{hint}
 
 % 12.4
 \item Դիցուք $\mathbb{R}^2$ կոորդինատային հարթությունում ունենք երկու $AB$ և $CD$ հատվածներ: Դիտարկելով այդ հատվածները որպես $\mathbb{R}^2$ տարածության ենթաբազմություններ $\mathbb{R}^2$-ից նրանց վրա մակածված տոպոլոգիաներով, կառուցեք որևէ $f: AB \to CD$ հոմեոմորֆիզմ:
-\par Լուծում: Ներմուծելով $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3), D(x_4, y_4)$ կոորդինատներ, կազմեք $AB$ և $CD$ ուղիղների պարամետրական հավասարումներ նույն $t \in [0, 1]$ տիրույթով և կատարեք պարամետրի անցում:
+
+\begin{hint}
+Ներմուծելով $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3), D(x_4, y_4)$ կոորդինատներ, կազմեք $AB$ և $CD$ ուղիղների պարամետրական հավասարումներ նույն $t \in [0, 1]$ տիրույթով և կատարեք պարամետրի անցում:
 \par Որոշ դեպքերում պահանջվող հոմեոմորֆիզմը կարելի է կառուցել երկրաչափականորեն, կենտրոնային կամ զուգահեռ պրոյեկցիաներով, ինչպես ցույց է տրված ներքևի օրինակներում:
+\end{hint}
+
+
+\begin{tikzpicture}[
+    scale=1.2,
+    thick,
+    every node/.style={text=black, font=\small},
+    dot/.style={circle, fill=black, inner sep=2.0pt} 
+]
+
+    % ==========================
+    % LEFT FIGURE
+    % ==========================
+    \begin{scope}
+        % 1. Define Origin
+        \coordinate (O) at (0,0);
+        \node[below left] at (O) {$O$};
+        \fill (O) circle (1.5pt);
+
+        % 2. Define Rays
+        \coordinate (RayTopFar) at (5, 2);
+        \coordinate (RayBotFar) at (5, -1);
+
+        % 3. Define Points A, B, C, D
+        \coordinate (A) at ($(O)!0.4!(RayBotFar)$);
+        \coordinate (C) at ($(O)!0.8!(RayBotFar)$);
+        \coordinate (B) at ($(O)!0.4!(RayTopFar)$);
+        \coordinate (D) at ($(O)!0.8!(RayTopFar)$);
+
+        % 4. Draw Lines
+        \draw (O) -- (D); 
+        \draw (O) -- (C); 
+        \draw (A) -- (B); 
+        \draw (C) -- (D); 
+
+        % 5. Define E 
+        % Moved "a bit up" from previous position (0.48 -> 0.65) -> down to 0.55 -> down to 0.45
+        \coordinate (E) at ($(A)!0.45!(B)$);
+        
+        % Calculate f(E) intersection
+        \path[name path=LineCD] (C) -- (D);
+        \path[name path=RayOE] (O) -- ($(O)!2.5!(E)$);
+        \path [name intersections={of=LineCD and RayOE, by=fE}];
+
+        % 6. Draw Ray O -> f(E)
+        \draw (O) -- (fE);
+
+        % 7. Dots and Labels
+        \foreach \p in {A,B,C,D,E,fE} \fill (\p) circle (1.5pt);
+        
+        \node[below] at (A) {$A$};
+        \node[above] at (B) {$B$};
+        \node[below] at (C) {$C$};
+        \node[above] at (D) {$D$};
+        \node[above right, xshift=2pt] at (E) {$E$};
+        \node[right, xshift=2pt] at (fE) {$f(E)$};
+    \end{scope}
+
+
+    % ==========================
+    % RIGHT FIGURE
+    % ==========================
+    \begin{scope}[xshift=9cm, yshift=-0.5cm, scale=1.2]
+        
+        % 1. Define C 
+        % Moved "a bit up and left" (Previous: -0.3, 0.7) -> Left to -0.6
+        \coordinate (C) at (-0.6, 0.7);
+
+        % 2. Define A relative to C 
+        % (Maintains the ~60 degree parallel angle) - AC even smaller (0.6,1.0 -> 0.45, 0.75)
+        \coordinate (A) at ($(C) + (0.45, 0.75)$); 
+
+        % 3. Define B relative to A
+        % Moved "a tiny bit to the right" (Length increased from 3.0 -> 3.4 -> 3.8)
+        \coordinate (B) at ($(A) + (3.8, 0.1)$);
+
+        % 4. Define D on Bottom Line
+        % Bottom line passes through C
+        \coordinate (BotRef) at (6.0, 0.0); 
+        \path[name path=BotLine] (C) -- (BotRef);
+        
+        % Vector AC for parallel projection
+        \coordinate (VecAC) at ($(C)-(A)$);
+        
+        % Path from B parallel to AC
+        \path[name path=LineBD] (B) -- ++(VecAC) -- ++(VecAC); 
+        \path [name intersections={of=BotLine and LineBD, by=D}];
+
+        % 5. Define E (on AB)
+        % Moved "to the right" (Ratio increased) -> Now "a bit left" (0.45 -> 0.4)
+        \coordinate (E) at ($(A)!0.4!(B)$);
+
+        % 6. Calculate f(E)
+        \path[name path=LineEfE] (E) -- ++(VecAC) -- ++(VecAC);
+        \path [name intersections={of=BotLine and LineEfE, by=fE}];
+
+        % 7. Draw Segments
+        % Top: Segment AB
+        \draw (A) -- (B);
+        
+        % Bottom: Segment CD
+        \draw (C) -- (D);
+        
+        % Middle Parallel: Ef(E)
+        \draw (E) -- (fE);
+        
+        % Left Parallel: AC (Extended top and bottom)
+        \draw ($(A)!-0.4!(C)$) -- ($(C)!-0.4!(A)$);
+        
+        % Right Parallel: BD (Extended top and bottom)
+        \draw ($(B)!-0.4!(D)$) -- ($(D)!-0.4!(B)$);
+
+        % 8. Dots and Labels
+        \foreach \p in {A,B,C,D,E,fE} \fill (\p) circle (1.5pt);
+
+        \node[above left] at (A) {$A$};
+        \node[below left, xshift=-3pt] at (C) {$C$};
+        \node[right] at (B) {$B$};
+        \node[below right] at (D) {$D$};
+        \node[above left, yshift=2pt] at (E) {$E$};
+        \node[below, xshift=-2pt] at (fE) {$f(E)$};
+
+    \end{scope}
+
+\end{tikzpicture}
 
 % 12.5
-\item Ստորև պատկերված են ա) շրջանագիծ, բ) օվալ (և իրեն չհատող փակ գիծ), գ) բազմանկյուն՝ որպես միացյալ հարթության ենթաբազմություններ և թեկուզևիս (?) իրեն չհատող տրեֆիլաձև փակ գիծ՝ որպես եռաչափ տարածության ենթաբազմություն:
-\par (Images of circle, oval, polygon, trefoil knot)
+\item Ստորև պատկերված են ա) շրջանագիծ, բ) օվալ (և իրեն չհատող փակ գիծ), գ) բազմանկյուն՝ որպես հարթության ենթաբազմություններ և իրեն չհատող երեքնակաձև փակ գիծ՝ որպես եռաչափ տարածության ենթաբազմություն:
+
+
+% hayeren chstargeci, u d-o positiony chax a 
+\begin{tikzpicture}[
+    scale=1.2,
+    line width=1.2pt,
+    color=black,
+    % Style for English labels
+    label text/.style={text=black, font=\large, anchor=north, yshift=-0.5cm}
+]
+
+    % ==========================
+    % Figure a: Circle
+    % ==========================
+    \begin{scope}[xshift=0cm]
+        \draw (0,0) circle (1cm);
+        \node[label text] at (0,-1.1) {a)};
+    \end{scope}
+
+    % ==========================
+    % Figure b: The "C" Shape
+    % ==========================
+    \begin{scope}[xshift=3.5cm]
+        \draw plot [smooth cycle, tension=0.8] coordinates {
+            (0, 1.0)     % Top
+            (-1.0, 0)    % Left belly
+            (0, -1.0)    % Bottom
+            (0.8, -0.6)  % Bottom right hook
+            (0.2, 0)     % Inner indent
+            (0.8, 0.6)   % Top right hook
+        };
+        \node[label text] at (0,-1.1) {b)};
+    \end{scope}
+
+    % ==========================
+    % Figure c: The Polygon
+    % ==========================
+    \begin{scope}[xshift=7cm]
+        \draw[line join=round] 
+            (0, 1.0)     -- 
+            (1.2, 0.4)   -- 
+            (0.4, -0.2)  -- 
+            (0.8, -1.0)  -- 
+            (-0.8, -1.0) -- 
+            (-1.2, 0.2)  -- 
+            cycle;
+        \node[label text] at (0,-1.1) {c)};
+    \end{scope}
+
+    % ==========================
+    % Figure d: Perfect Trefoil Knot (Better Over/Under)
+    % ==========================
+    \begin{scope}[xshift=10.5cm, scale=0.4, yshift=0.1cm] % Scaled up slightly (0.35 -> 0.4) and moved down (1.0 -> 0.5)
+        % Parametric Equations for Trefoil:
+        % x = sin(t) + 2 sin(2t)
+        % y = cos(t) - 2 cos(2t)
+        % Domain 0 to 360 covers the whole knot.
+        % Rotated/flipped by using negative signs as before to orient loop up.
+
+        % 1. Draw the FULL knot first as the "background"
+        \draw[line width=1.5pt, color=black] plot[domain=0:360, samples=90, smooth] 
+            ({-(sin(\x) + 2*sin(2*\x))}, {-(cos(\x) - 2*cos(2*\x))});
+
+        % 2. Draw "Over" segments with a double-line effect
+        % We draw a thick WHITE line first (to erase the crossing underneath),
+        % then the black line again on top.
+        
+        % Crossing 1 (Bottom Right):
+        % Parametric range approx 90-110 crosses over approx 330-350
+        \draw[line width=4.5pt, color=white] plot[domain=90:110, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {-(cos(\x) - 2*cos(2*\x))});
+        \draw[line width=1.5pt, color=black] plot[domain=90:110, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {-(cos(\x) - 2*cos(2*\x))});
+
+        % Crossing 2 (Top Center):
+        % Parametric range approx 210-230 crosses over approx 90-110 logic? 
+        % Actually checking the symmetry: 210-230 is the top loop crossing over.
+        \draw[line width=4.5pt, color=white] plot[domain=210:230, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {-(cos(\x) - 2*cos(2*\x))});
+        \draw[line width=1.5pt, color=black] plot[domain=210:230, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {-(cos(\x) - 2*cos(2*\x))});
+
+        % Crossing 3 (Bottom Left):
+        % Parametric range approx 330-350 crosses over.
+        \draw[line width=4.5pt, color=white] plot[domain=330:350, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {-(cos(\x) - 2*cos(2*\x))});
+        \draw[line width=1.5pt, color=black] plot[domain=330:350, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {-(cos(\x) - 2*cos(2*\x))});
+
+        % Label position adjusted to align with others
+        % We want the label to appear at approximately the same visual height.
+        % Others are at y = -1.1. 
+        % Here we are scaled by 0.4 and shifted by 0.5.
+        % To match visual y=-1.1 relative to the baseline of other figures:
+        \node[label text] at (0,-4.0) {d)}; 
+    \end{scope}
+
+\end{tikzpicture}
 \par Ապացուցեք, որ դրանք հոմեոմորֆ են իրար:
 
 \begin{hint}
-Շրջանագծի վրա վերցրեք $A_1, A_2, ..., A_6$ կետեր, «տրեֆիլաձևի» վրա՝ $B_1, B_2, ..., B_6$ կետեր:
-\par Վերցրեք $f_i: A_i A_{i+1} \to B_i B_{i+1}, i=1, 2, ..., 5$ և $f_6: A_6 A_1 \to B_6 B_1$ հոմեոմորֆիզմներ կառուցեք հոմեոմորֆիզմ... (text cuts off) ... տեսնեմ 3-ում:
+Շրջանագծի վրա վերցրեք $A_1, A_2, \dots, A_6$ կետեր, «երեքնակաձև» վրա՝ $B_1, B_2, \dots, B_6$ կետեր:
+
+
+\begin{tikzpicture}[
+    scale=1.0,
+    every node/.style={font=\large, text=black},
+    dot/.style={circle, fill=black, inner sep=2pt}
+]
+
+    % ==========================
+    % LEFT FIGURE: The Circle
+    % ==========================
+    \begin{scope}[xshift=0cm]
+        \draw[thick, black] (0,0) circle (1.5cm);
+
+        % Brace the position values to prevent 'unknown key' error
+        \foreach \i/\angle/\pos in {
+            1/270/below, 
+            2/210/{below left}, 
+            3/150/{above left}, 
+            4/90/above, 
+            5/30/{above right}, 
+            6/-30/{below right}} 
+        {
+            \node[dot] (A\i) at (\angle:1.5cm) {};
+            \node[\pos] at (A\i) {$A_{\i}$};
+        }
+    \end{scope}
+
+
+    % ==========================
+    % RIGHT FIGURE: The Trefoil Knot
+    % ==========================
+    \begin{scope}[xshift=6cm, scale=0.5] 
+        
+        % NOTE: Removed the negative sign from Y coordinate to flip the shape
+        % vertically so it points DOWN (matching your B1 at bottom sketch).
+        
+        % 1. Draw the FULL knot (Background)
+        \draw[line width=1.5pt, color=black] plot[domain=0:360, samples=100, smooth] 
+            ({-(sin(\x) + 2*sin(2*\x))}, {(cos(\x) - 2*cos(2*\x))});
+
+        % 2. Draw "Over" segments (Halo Effect)
+        
+        % Crossing 1 (Bottom Right area in this orientation)
+        \draw[line width=4.5pt, color=white] plot[domain=90:110, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {(cos(\x) - 2*cos(2*\x))});
+        \draw[line width=1.5pt, color=black] plot[domain=90:110, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {(cos(\x) - 2*cos(2*\x))});
+
+        % Crossing 2 (Top Center area)
+        \draw[line width=4.5pt, color=white] plot[domain=210:230, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {(cos(\x) - 2*cos(2*\x))});
+        \draw[line width=1.5pt, color=black] plot[domain=210:230, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {(cos(\x) - 2*cos(2*\x))});
+
+        % Crossing 3 (Bottom Left area)
+        \draw[line width=4.5pt, color=white] plot[domain=330:350, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {(cos(\x) - 2*cos(2*\x))});
+        \draw[line width=1.5pt, color=black] plot[domain=330:350, samples=20, smooth] 
+             ({-(sin(\x) + 2*sin(2*\x))}, {(cos(\x) - 2*cos(2*\x))});
+
+        % 3. Place Labels B1...B6
+        % Adjusted angles for the flipped (Point Down) orientation
+        \foreach \i/\t/\pos in {
+            1/180/below,        
+            2/240/{below left, yshift=5pt, xshift=-2pt}, 
+            3/300/{above right, yshift=0pt}, 
+            4/0/above,          
+            5/60/{above left, yshift=0pt}, 
+            6/120/{below right, yshift=5pt}} 
+        {
+            % Calculate coordinate
+            \pgfmathsetmacro{\px}{-(sin(\t) + 2*sin(2*\t))}
+            \pgfmathsetmacro{\py}{(cos(\t) - 2*cos(2*\t))} % Removed minus here too
+            
+            \node[dot] (B\i) at (\px,\py) {};
+            \expandafter\node\expandafter[\pos] at (B\i) {$B_{\i}$};
+        }
+        
+    \end{scope}
+
+\end{tikzpicture}
+
+\par Ընտրելով $f_i: A_i A_{i+1} \to B_i B_{i+1}, i=1, 2, \dots, 5$ և $f_6: A_6 A_1 \to B_6 B_1$ հոմեոմորֆիզմներ կառուցեք հոմեոմորֆիզմ շրջանագծի և երեքնակաձևի միջև օգտվելով թեորեմ 3-ից:
 \end{hint}
 
 % 12.6
