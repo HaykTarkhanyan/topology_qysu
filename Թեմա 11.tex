@@ -108,9 +108,28 @@ $f:X\rightarrow Y$ անընդհատ արտապատկերումը կոչվում 
 
 \par Դիտարկենք $A=\left\{\left(x;\, \dfrac{1}{x}\right)\mid x\in\R\setminus\{0\}\right\}$ ենթաբազմությունը $\R^2$-ում ($y=\dfrac{1}{x}$ հիպերբոլի գրաֆիկը)։ Այն փակ ենթաբազմություն է, քանի որ $\R^2\setminus A$ լրացումը բաց է (հիմնավորե՛ք)։ Բայց նրա $P(A)=(-\infty,0) \cup (0, +\infty)$ կերպարը փակ չէ $\R$-ում (\textbf{ինչո՞ւ})։
 Ուստի՝ $P$-ն փակ արտապատկերում չէ։ \qed
-\input{tikz/11nkar1.tex}
+
+\begin{center}
+\begin{tikzpicture}
+\draw[->, ultra thick, blue!70] (0,3) -- (3,3);
+\draw[->, ultra thick, blue!70] (6,3) -- (3,3);
+\draw[->,  thick] (3,0) -- (3,6);
+
+\node[anchor=east] at (0, 3) {$\R$};
+\node[anchor=north east] at (2, 5) {$\R^2$};
+\node[anchor=north west] at (3.05,2.95) {$0$};
+
+\draw[scale=1, domain=3.4:5.6, smooth, variable=\x, blue] plot ({\x}, {1/(\x-3)+3});
+\draw[scale=1, domain=0.4:2.6, smooth, variable=\x, blue] plot ({\x}, {1/(\x-3)+3});
+
+\draw [-stealth](3.5,4) -- (3.5,3.25) node[anchor=south west] {$P$};
+\draw [-stealth](2.5,2) -- (2.5,2.75) node[anchor=north east] {$P$};
+
+\end{tikzpicture}
+\end{center}
+
 \end{example}
-\par Ինչպես գիտենք, եթե $f:X\rightarrow Y$ և $g:Y\rightarrow Z$ արտապատկերումներն անընդհատ են, ապա նրանց $g\circ f:Y\rightarrow Z$ համադրույթը անընդհատ է։ Քննարկենք հակառակ խնդիրը․ դիցուք հայտնի է, որ $g\circ f$ համադրույթը անընդհատ է, և անընդհատ է $f, g$ արտապատկերումներից մեկը։ Կլինի՞ անընդհատ մյուսը։ Հետևյալ օրինակները ցույց են տալիս, որ ընդհանուր դեպքում հարցի պատասխանը բացասական է։
+\par Ինչպես գիտենք, եթե $f:X\rightarrow Y$ և $g:Y\rightarrow Z$ արտապատկերումներն անընդհատ են, ապա նրանց $g\circ f:Y\rightarrow Z$ համադրույթը անընդհատ է։ Քննարկենք հակառակ խնդիրը․ դիցուք հայտնի է, որ $g\circ f$ համադրույթը անընդհատ է, և անընդհատ է $f$, $g$ արտապատկերումներից մեկը։ Կլինի՞ անընդհատ մյուսը։ Հետևյալ օրինակները ցույց են տալիս, որ ընդհանուր դեպքում հարցի պատասխանը բացասական է։
 
 \begin{example} 
 Դիտարկենք որևէ $f:X\rightarrow Y$ ոչ անընդհատ արտապատկերում և ${g:Y\rightarrow \R},\ g(y)=0,\ y\in\R$ հաստատուն արտապատկերումը։ Պարզ է, որ ${g\circ f:X\rightarrow\R}$ համադրույթը նույնպես հաստատուն արտապատկերում է, և հետևա\-բար այն անընդհատ է։ Այսպիսով՝ $g\circ f$ –ը և $g$-ն անընդհատ են, բայց $f$-ը անընդհատ չէ։
