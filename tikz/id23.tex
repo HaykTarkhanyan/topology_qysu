@@ -2,20 +2,36 @@
 marr/.style={line width=1mm,-latex}]
     \node[lablum=1] at (-3,0) {
     \begin{tikzpicture}
-        \draw[thick, pattern=vertical lines, pattern color=gray] (0,0) rectangle (3,2);
+        \draw[thick, fill=blue!10] (0,0) rectangle (3,2);
         \node[above left] (b) at (0,2) {$B$};
         \node[below left] (a) at (0,0) {$A$};
         \node[above right] (c) at (3,2) {$C$};
         \node[below right] (d) at (3,0) {$D$};
+        \node[circle, fill, inner sep=1.5pt, label=left:$E$] (e) at (0,0.6) {};
+        \node[circle, fill, inner sep=1.5pt, label=right:$F$] (f) at (3,2-0.6) {};
         \draw[thick] (0,0) -- (0,2);
         \draw[thick] (0,0) -- (3,0);
         \draw[thick] (0,2) -- (3,2);
         \draw[thick] (3,0) -- (3,2);
-        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,2) -- (0,1);
-        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,0) -- (3,1);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,0.6) -- (0,1.4);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,2-0.6) -- (3,2-1.4);
     \end{tikzpicture}
     } ;
-    \node[lablum=2] at (5,0) {\includegraphics[width=7cm]{ID 23.jpg}} ;
-    \draw[thick, ->] (img-1) -- (img-2);
+    \node[lablum=2] at (5.3,0) {\includegraphics[width=7cm]{ID 23.jpg}} ;
+    
+    \draw[thick, black!80] (4.976,1.618) -- (4.976,0.9) node[midway,yshift=-4.5] {\scriptsize$\color{black!100}E \,\,\,\,\,F$};
+    \node[circle, fill=black!90, inner sep=1.1pt] (f) at (4.976,1.1) {};
+
+    \node[label={[label distance=-1pt]below:\scriptsize$\color{black!100}A, C$}] at (4.976,1.05) {};
+    \node[label={[label distance=-1pt]above:\scriptsize$\color{black!100}B, D$}] at (4.976,1.45) {};
+
+    % \node[label={[label distance=-1pt]below:$A, D$}] at (6.15,-2.1) {};
+    % \node[label={[label distance=-1pt]above:$B, C$}] at (6.17,1.6) {};
+    % \node[label={[label distance=-1pt]left:$E$}] at (6.25,-1.57) {};
+    % \node[label={[label distance=-1pt]left:$F$}] at (6.82,-1.57) {};
+    
+    
+    \draw[thick, ->] (-0.5,0) -- (1.25,0);
+
 
 \end{tikzpicture}

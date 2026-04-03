@@ -1,20 +1,58 @@
 \begin{center}
-\begin{tikzpicture}
+\begin{tikzpicture}[scale=0.9]
     \def\x{5}
     \def\tick{0.1}
+    \def\radius{1.5}
 
+    % --------------------
+    % Number line
+    % --------------------
     \draw (0,0) -- (\x,0);
-    \draw (0,\tick*2) -- ++(0,-2*\tick*2) node[below] {$0$};
-    \draw (0.25*\x,\tick) -- ++(0,-2*\tick) node[below] {$\dfrac{1}{4}$};
-    \draw (0.5*\x,\tick) -- ++(0,-2*\tick) node[below] {$\dfrac{1}{2}$};
-    \draw (0.75*\x,\tick) -- ++(0,-2*\tick) node[below] {$\dfrac{3}{4}$};
-    \draw (\x,\tick*2) -- ++(0,-2*\tick*2) node[below] {$1$};
-    \draw (\x+4,0) circle (1.5);
-    
-    \draw[->, thick] (\x+0.5,0) -- (\x+2,0) node[midway, above] {$P$};
-    \filldraw (\x+2.5,0) circle (2pt) node[right] {$\dfrac{1}{4}$};
-    \filldraw (\x+4,1.5) circle (2pt) node[below] {$\dfrac{1}{2}$};
-    \filldraw (\x+5.5,0) circle (2pt) node[right] {$\dfrac{3}{4}$};
-    \filldraw (\x+4,-1.5) circle (2pt) node[below] {$\{0;1\}$};
+
+    \def\q{0.25*\x}
+    \def\h{0.5*\x}
+    \def\tq{0.75*\x}
+
+    \draw (0,\tick) -- ++(0,-2*\tick) node[below] {$0$};
+    \draw (\q,\tick) -- ++(0,-2*\tick) node[below] {\scalebox{0.75}{$\dfrac{1}{4}$}};
+    \draw (\h,\tick) -- ++(0,-2*\tick) node[below] {\scalebox{0.75}{$\dfrac{1}{2}$}};
+    \draw (\tq,\tick) -- ++(0,-2*\tick) node[below] {\scalebox{0.75}{$\dfrac{3}{4}$}};
+    \draw (\x,\tick) -- ++(0,-2*\tick) node[below] {$1$};
+
+    % First arrow
+    \draw[->, thick] (\x+0.6,0) -- (\x+1.9,0);
+
+    % --------------------
+    % Cut circle
+    % --------------------
+    \coordinate (C1) at (\x+4,0);
+
+    \draw (C1) ++(130:\radius) arc (130:410:\radius);
+
+    % Endpoints
+    \filldraw (C1) ++(130:\radius) circle (2pt) node[above left] {$0$};
+    \filldraw (C1) ++(50:\radius) circle (2pt) node[above right] {$1$};
+
+    % Adjusted intermediate points
+    \filldraw (C1) ++(200:\radius) circle (2pt) node[left] {\scalebox{0.75}{$\dfrac{1}{4}$}};
+    \filldraw (C1) ++(270:\radius) circle (2pt) node[below] {\scalebox{0.75}{$\dfrac{1}{2}$}};
+    \filldraw (C1) ++(340:\radius) circle (2pt) node[right] {\scalebox{0.75}{$\dfrac{3}{4}$}};
+
+    % Second arrow
+    \draw[->, thick] (\x+6.1,0) -- (\x+7.4,0);
+
+    % --------------------
+    % Glued circle (0 = 1)
+    % --------------------
+    \coordinate (C2) at (\x+9.6,0);
+
+    \draw (C2) circle (\radius);
+
+    % Points (back to full circle parametrization)
+    \filldraw (C2) ++(90:\radius) circle (2pt) node[above] {$\{0; 1\}$};
+    \filldraw (C2) ++(180:\radius) circle (2pt) node[left] {\scalebox{0.75}{$\dfrac{1}{4}$}};
+    \filldraw (C2) ++(270:\radius) circle (2pt) node[below] {\scalebox{0.75}{$\dfrac{1}{2}$}};
+    \filldraw (C2) ++(0:\radius) circle (2pt) node[right] {\scalebox{0.75}{$\dfrac{3}{4}$}};
+
 \end{tikzpicture}
 \end{center}

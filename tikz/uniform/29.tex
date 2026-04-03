@@ -1,44 +1,65 @@
 \begin{center}
 \begin{tikzpicture}
-    \coordinate (A) at (0,0);
-    \coordinate (D) at (4,0);
-    \coordinate (C) at (4,3);
-    \coordinate (B) at (0,3);
-    %\fill (A) circle (2.5pt);
-    %\fill (B) circle (2.5pt);
-    %\fill (C) circle (2.5pt);
-    %\fill (D) circle (2.5pt);
-    \node[above left] at (B) {$B$};
-    \node[above right] at (C) {$C$};
-    \node[below left] at (A) {$A$};
-    \node[below right] at (D) {$D$};
-    \draw (D) -- (A) -- (B) -- (C) -- cycle;
-    \filldraw[thick, pattern=vertical lines, pattern color=gray] (A) -- (B) -- (C) -- (D) -- cycle;
-    \draw[-{Stealth[length=3mm, width=3mm]}] (A) -- (0,1.5);
-    \draw[-{Stealth[length=3mm, width=3mm]}] (C) -- (4,1.5);
-    \draw[-{Stealth[length=3mm, width=3mm]}] (D) -- (2,0);
-    \draw[-{Stealth[length=3mm, width=3mm]}] (B) -- (2,3);
+%    \filldraw[thick, fill=blue!10] (0,0) rectangle (3,2);
+%         \node[above left] (b) at (0,2) {$B$};
+%         \node[below left] (a) at (0,0) {$A$};
+%         \node[above right] (c) at (3,2) {$C$};
+%         \node[below right] (d) at (3,0) {$D$};
+        
+%         \node[circle, fill, inner sep=1.5pt, label=above:$E$] (e) at (2,2) {};
+%         \node[circle, fill, inner sep=1.5pt, label=below:$F$] (f) at (1,0) {};
 
-    \coordinate (center) at (9,1.5);
-    \def\radius{2}
-    \filldraw [thick, pattern=vertical lines, pattern color=gray] (center) circle (\radius);
-    \fill (center) ++(0.1*180:\radius) circle (2.5pt);
-    \fill (center) ++(1.1*180:\radius) circle (2.5pt);
-    \fill (center) ++(0.3*180:\radius) circle (2.5pt);
-    \fill (center) ++(1.3*180:\radius) circle (2.5pt);
-    \fill (center) ++(0.5*180:\radius) circle (2.5pt);
-    \fill (center) ++(1.5*180:\radius) circle (2.5pt);
-    \fill (center) ++(0.7*180:\radius) circle (2.5pt);
-    \fill (center) ++(1.7*180:\radius) circle (2.5pt);
-    \node at ($ (center) + (0.1*180:\radius*1.18) $) {$D$};
-    \node at ($ (center) + (1.1*180:\radius*1.18) $) {$D$};
-    \node at ($ (center) + (0.3*180:\radius*1.18) $) {$A$};
-    \node at ($ (center) + (1.3*180:\radius*1.18) $) {$A$};
-    \node at ($ (center) + (0.5*180:\radius*1.18) $) {$E$};
-    \node at ($ (center) + (1.5*180:\radius*1.18) $) {$E$};
-    \node at ($ (center) + (0.7*180:\radius*1.18) $) {$B$};
-    \node at ($ (center) + (1.7*180:\radius*1.18) $) {$B$};
+%         \draw[thick] (0,0) -- (0,2);
+%         \draw[thick] (0,0) -- (3,0);
+%         \draw[thick] (0,2) -- (3,2);
+%         \draw[thick] (3,0) -- (3,2);
+%         \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,0) -- (0,1);
+%         \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,0) -- (1.5,0);
+%         \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,2) -- (1.5,2);
+%         \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,0) -- (3,1);
+        \draw[thick, fill=white] (0,0) rectangle (3,2);
+        \node[above left] (b) at (0,2) {$B$};
+        \node[below left] (a) at (0,0) {$A$};
+        \node[above right] (c) at (3,2) {$C$};
+        \node[below right] (d) at (3,0) {$D$};
 
-    \node at (5.5,1.5) {$\resizebox{1.4cm}{0.3cm}{$\sim$}$};
+        \draw[thick] (0,0) -- (0,2);
+        \draw[thick] (0,0) -- (3,0);
+        \draw[thick] (0,2) -- (3,2);
+        \draw[thick] (3,0) -- (3,2);
+        
+        \node[circle, fill=blue!90, inner sep=1.5pt, label={[label distance=-1.5pt]left:$E$}] (e) at (0,0.6) {};
+        \node[circle, fill=blue!90, inner sep=1.5pt] (e2) at (3,2-0.6) {};
+        \node[circle, fill=red!90, inner sep=1.5pt, label={[label distance=-1.5pt]above:$F$}] (f) at (0.6,2) {};
+        \node[circle, fill=red!90, inner sep=1.5pt] (f2) at (3-0.6,0) {};
+        % \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,0.6) -- (0,1.4);
+        % \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,2-0.6) -- (3,2-1.4);
+        % \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (1.0,2) -- (1.8,2);
+        % \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (2.0,0) -- (1.2,0);
+        % \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,2-0.6) -- (3,2-1.4);
+
+
+
+    \coordinate (center) at (9-0.8,1.1);
+    \def\radius{1.5}
+    \filldraw [thick, fill=white] (center) circle (\radius);
+    \fill[blue!90] (center) ++(0.05*180:\radius) circle (2.5pt);
+    \fill (center) ++(0.2*180:\radius) circle (2.5pt);
+    \fill[red!90] (center) ++(0.6*180:\radius) circle (2.5pt);
+    \fill (center) ++(0.75*180:\radius) circle (2.5pt);
+    \fill[blue!90] (center) ++(1.05*180:\radius) circle (2.5pt);
+    \fill (center) ++(1.2*180:\radius) circle (2.5pt);
+    \fill[red!90] (center) ++(1.6*180:\radius) circle (2.5pt);
+    \fill (center) ++(1.75*180:\radius) circle (2.5pt);
+    \node at ($ (center) + (0.05*180:\radius*1.27) $) {$E$};
+    \node at ($ (center) + (0.2*180:\radius*1.27) $) {$A$};
+    \node at ($ (center) + (0.6*180:\radius*1.27) $) {$F$};
+    \node at ($ (center) + (0.75*180:\radius*1.27) $) {$B$};
+    \node at ($ (center) + (1.05*180:\radius*1.27) $) {$E$};
+    \node at ($ (center) + (1.2*180:\radius*1.27) $) {$A$};
+    \node at ($ (center) + (1.6*180:\radius*1.27) $) {$F$};
+    \node at ($ (center) + (1.75*180:\radius*1.27) $) {$B$};
+
+    \node at (4.5+0.3,0.9) {$\Huge \sim$};
 \end{tikzpicture}
 \end{center}
