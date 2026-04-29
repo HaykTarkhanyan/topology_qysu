@@ -18,7 +18,7 @@
 17. Tema 17 - Needs Review 🕵️
 18. References - Needs Review 🕵️
 
-9,10,11 were merged and some exercises moved, see 00_new_todo գրություն
+9,10,11 were merged and some exercises moved, see 00_new_todo
 
 
 !!! Some 3D Plot tasks not done !!!
