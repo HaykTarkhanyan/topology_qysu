@@ -88,6 +88,13 @@
   \raisebox{-\mydepth}{{#1}}%
 }
 
+
+\newcommand*\inlinegraphicslower[1]{%
+  \settototalheight\myheight{Xygp}%
+  \settodepth\mydepth{Xygp}%
+  \raisebox{-\mydepth-3pt}{{#1}}%
+}
+
 \usepackage{caption}
 \usepackage{subcaption}
 
@@ -146,6 +153,7 @@
 \newtheorem*{hetevanq5}{Հետևանքներ թեորեմ 5-ից}
 \newtheorem*{hetevanq6}{Հետևանքներ թեորեմ 6-ից}
 \newtheorem*{hetevanq7}{Հետևանք թեորեմ 7-ից}
+\newtheorem*{hetevanq6_7}{Հետևանք թեորեմներ 6-ից և 7-ից}
 \newtheorem*{hetevanqlind}{Հետևանք (Լինդելյոֆի) թեորեմից}
 \newtheorem*{hetevanqax}{Հետևանք աքսիոմներից}
 \newtheorem*{separabelex}{Սեպարաբել տարածությունների օրինակներ}
