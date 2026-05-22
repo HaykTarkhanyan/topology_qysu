@@ -22,11 +22,11 @@
 Կարդաց\-վում է․ $Y$-ը կազմված է $X$-ի այն բոլոր տարրերից, որոնք բավարարում են նշված պահանջին։
 % \[ Y=\left\{x \in X \mid (x\textrm{տարրի վերաբերյալ} \textrm{ պահանջ})\right\} \textrm{ կամ } Y=\left\{x \in X ; (x\textrm{-ի վերաբերյալ} \textrm{ պահանջ})\right\}։\] 
 % Կարդաց\-վում է․ $Y$-ը կազմված է $X$-ի այն բոլոր տարրերից, որոնք բավարարում են նշված պահանջին։
-\begin{example}
+\begin{example}\label{ch1ex1}
 Դիցուք $\Z=\{0, \pm 1, \pm 2, \dots \}$, բոլոր ամբողջ թվերի բազմությունն է, իսկ $2\Z=\{0, \pm 2, \pm 4, \dots\}$ բոլոր զույգ թվերի բազմությունն է։ Պարզ է, որ $2\Z\subset\Z$ և $2\Z$-ը կարող է գրառվել՝ $2\Z=\left\{x \in \Z \mid x\textrm{-ը առանց մնացորդի բաժանվում է 2-ի վրա}\right\}$։
 \end{example}
 Երբեմն «ավելի ծավալուն» բազմությունը նկարագրվում է (սահմանվում է) «ավե\-լի նվազ ծավալով» բազմության միջոցով։
-\begin{example}
+\begin{example}\label{ch1ex2}
 $\R^2$ կոորդինատային հարթությունը կարող է ներկայացվել $\R$ թվային ուղղի միջոցով, որպես թվազույգերի բազմություն՝ $\R^2=\{(x, y)\mid {x, y \in \R}\}$։
 \end{example}
 Բազմությունների համար սահմանվում են \textbf{հատման}, \textbf{միավորման} և \textbf{տար\-բե\-րու\-թյան} \textbf{գործողություններ}։ Օգտվելով նկարագրական եղանակից՝ երկու բազմութ\-յուն\-ների հատման, միավորման և տարբերության սահմանումները կարելի է գրառել համառոտ՝
@@ -46,7 +46,7 @@ A\setminus B=\left\{ x\in A \mid x \not\in B\right\}։
     \item[դ)] $A\setminus(B_1\cup B_2)=(A\setminus B_1)\cap (A\setminus B_2),\ A\setminus (B_1\cap B_2)= (A\setminus B_1)  \cup (A\setminus B_2)$։\par
     դ) նույնությունները կոչվում են դե Մորգանի բանաձևեր։
 \end{enumerate}
-\begin{example}
+\begin{example}\label{ch1ex3}
 Ապացուցենք դե Մորգանի առաջին բանաձևը։
 \par Այդ նպատակով ցույց տանք, որ $A \setminus (B_1 \cup B_2)$ բազմության յուրաքանչյուր տարր պատկանում է $(A\setminus B_1)\cap (A\setminus B_2)$ բազմությանը և հակառակը՝
 \[
@@ -71,7 +71,7 @@ A\setminus B=\left\{ x\in A \mid x \not\in B\right\}։
 \end{equation*}
 որտեղ $A, B_1, B_2, \dots, B_n$-ը կամայական բազմություններ են։
 \par Հաճախ դիտարկվում են բազմություններ, որոնց տարրերը իրենք ևս բազմութ\-յուն\-ներ են։ Այդպիսի բազմությունը կոչվում է \textbf{բազմությունների ընտանիք}։
-\begin{example}
+\begin{example}\label{ch1ex4}
 Դիտարկենք $\R^2$ հարթության մեջ գտնվող բոլոր ուղիղների բազմութ\-յունը։ Սա բազմությունների ընտանիք է, որի տարրերը (ուղիղները) իրենք ևս բազ\-մու\-թյուններ են կազմված $\R^2$-ի կետերից։
 \end{example}
 Դիցուք $I$-ն բազմություն է, որի ամեն մի $i\in I$ տարրի համապատասխանեցված է որևէ $X_i$ բազմություն։ Այս $X_i$ բազմություններից կազմված բազմությունը (բազ\-մութ\-յունների ընտանիքը) նշանակվում է $\left\{ X_i; \,  i \in I \right\}$ և կոչվում է \textbf{բազմությունների ինդեքսավոր\-ված ընտանիք}։ Այստեղ $I$-ն կոչվում է \textbf{ինդեքսների բազմություն}։
@@ -81,7 +81,7 @@ A\setminus B=\left\{ x\in A \mid x \not\in B\right\}։
 \par Օրինակ, թվերից կազմված հաջորդականության տարրերը սովորաբար ին\-դեք\-սա\-վորում են (համարակալում են) կամ բոլոր բնական թվերով, կամ այդ բազմության որևէ վերջավոր մասով։
 
 % ավելացված
-\begin{example}
+\begin{example}\label{ch1ex5}
 Ինդեքսավորենք կոորդինատային $\R^2$ հարթության $O$ սկզբնակետով անցնող բոլոր ուղիղների բազմությունը։ Նկատենք, որ ամեն մի այդպիսի ուղիղ միարժեքորեն որոշվում է այն ամենափոքր $\alpha$ անկյունով, որով պետք է պտտել $OX$ առանցքը $O$ կետի շուրջը ժամսլաքին հակառակ ուղղությամբ, մինչև որ այն համընկնի $l$ ուղղի հետ։ 
 \begin{center}
 \begin{tikzpicture}%[scale=0.8]
@@ -149,7 +149,7 @@ A\setminus B=\left\{ x\in A \mid x \not\in B\right\}։
 
 \end{example}
 
-\begin{example}
+\begin{example}\label{ch1ex6}
 Դիտարկենք $\R^2$ հարթության մեջ այն բոլոր ուղիղներից կազմված $L$ բազմությունը, որոնք գտնվում են կոորդինատների $0$ սկզբնակետից $1$ միավոր հեռավորության վրա։ Ցույց տանք, թե ինչպես կարելի է ինդեքսավորել $L$-ը։ Նկա\-տենք, որ այդ բազմության ամեն մի տարր (ուղիղ) ունի ճիշտ մի ընդհանուր կետ $S=\left\{ (x; y) \mid x^2+y^2=1 \right\}$ շրջանագծի հետ (շոշափման կետը)։ Նշանակելով $l_{\displaystyle{s}}$-ով շրջանագծի $s\in S$ կետով տարված շոշափողը, կարող ենք $L$ բազմությունը ներ\-կա\-յացնել որպես բազմությունների ինդեքսավորված ընտանիք՝ $L=\left\{l_{\displaystyle s} ;\, s
  \in S\right\}$։
 \par Այս օրինակում որպես ինդեքսների բազմություն հանդես եկավ միավոր շրջա\-նա\-գծի բոլոր կետերից կազմված $S$ բազմությունը։ 
@@ -257,12 +257,12 @@ A\setminus B=\left\{ x\in A \mid x \not\in B\right\}։
 % \par Պարզ է, որ $f(X)=[1;4],\ f(A)=[1;2]$։
 % \par Բացի այդ՝ $f^{-1} (f(A))=\{ (x_1,x_2)\mid 1\leq x_1\leq 2,\ 1\leq x_2\leq 4\}$։ Ուրեմն ${A\subset f^{-1} (f(A))}$, ընդ որում $A\neq f^{-1} (f(A))$։ Ունենք նաև $f^{-1} (B)=\{(x_1,x_2)\mid 1\leq x_1\leq 2,\ {1\leq x_2\leq 4}\},\\ f^{-1} (f(B))=[1;2]$։ Նկատենք, որ $f(f^{-1} (B))\subset B$, բայց $f(f^{-1} (B))\neq B$։
 % \end{example}
-\begin{example}
+\begin{example}\label{ch1ex7}
 \label{օրինակ 1:7}
 Դիցուք $X$ և $Y$ բազմությունները կազմված են երկուական տարրերից՝ $X=\{x_1,x_2\},\ Y=\{y_1,y_2\}$։ Դիտարկենք $f:X\to Y$ արտապատկերում՝ սահմանելով $f(x_1)=f(x_2)=y_2$։
 \par Ընթերցողին առաջարկում ենք որպես օգտակար վարժանք գտնել $X$-ի բոլոր $4$ ենթաբազմությունների կերպարները $Y$-ում և $Y$-ի բոլոր $4$ ենթաբազմությունների նախակերպարները $X$-ում։
 \end{example}
-\begin{theorem} 
+\begin{theorem}\label{ch1thm1} 
 Ամեն մի $f:X\rightarrow Y$ արտապատկերման և կամայական $X_1,X_2\subset X$ ենթաբազմությունների դեպքում
 \begin{align*}
 f(X_1\cup  X_2)=f(X_1)&\cup  f(X_2), \quad f(X_1\cap X_2)\subset {f(X_1)\cap f(X_2)},\\
@@ -288,7 +288,7 @@ f(X_1\cup  X_2)=f(X_1)&\cup  f(X_2), \quad f(X_1\cap X_2)\subset {f(X_1)\cap f(X
 \begin{equation*}
     f \left(\mathsmaller{\bigcup}\limits_{i \in I} X_i \right)=\mathsmaller{\bigcup}\limits_{i \in I} f\left(X_i\right), \quad f\left(\mathsmaller{\bigcap}\limits_{i \in I} X_i \right)\subset \mathsmaller{\bigcap}\limits_{i \in I} f\left(X_i\right)
 \end{equation*}
-\begin{theorem}
+\begin{theorem}\label{ch1thm2}
 Կամայական $f:X\rightarrow Y$ արտապատկերման և $Y_1,Y_2 \subset Y$ ենթա\-բազմու\-թյունների դեպքում
 \begin{align*}
 f^{-1} (Y_1\cup Y_2)= f^{-1} &(Y_1)\cup f^{-1} (Y_2), \quad f^{-1} (Y_1\cap Y_2)=f^{-1} (Y_1)\cap f^{-1} (Y_2),\\
@@ -314,7 +314,7 @@ x\in f^{-1} (Y_1)\cup f^{-1} (Y_2)
 \begin{equation} \label{eq:1.2}
 f^{-1} \left(\mathsmaller{\bigcup}\limits_{i \in I} Y_i \right)=\mathsmaller{\bigcup}\limits_{i \in I} f^{-1} (Y_i ),\quad f^{-1} \left(\mathsmaller{\bigcap}\limits_{i \in I} Y_i \right)=\mathsmaller{\bigcap}\limits_{i \in I} f^{-1} (Y_i)
 \end{equation}
-\begin{theorem}
+\begin{theorem}\label{ch1thm3}
 Կամայական $f:X\rightarrow Y$ արտապատկերման և $A\subset X,\ B\subset Y$ ենթաբազմությունների դեպքում
 \begin{equation} \label{eq:1.3}
     f(f^{-1} (B))\subset B,\quad A\subset f^{-1}(f(A))
@@ -336,12 +336,12 @@ $f:X\rightarrow Y$ արտապատկերումը կոչվում է \textbf{ներ
 \par Ցանկացած $X$ բազմության համար $x\mapsto x,\ x\in X$ համապատասխանությունը որոշում է $X\rightarrow X$ փոխմիարժեք արտապատկերում։ Այն կոչվում է $X$-ի \textbf{նույնական արտապատկերում} և նշանակվում է $\id$ կամ $\nuynakan_X$ սիմվոլներով։
 
 % ավելացված
-\begin{example}
+\begin{example}\label{ch1ex8}
 Ամբողջ թվերի $\Z$ բազմության $f : \Z \rightarrow \Z$ արտապատկերումը՝ սահմանված $f(n)=n+1$ բանաձևով, փոխմիարժեք է (հիմնավորե՛ք) և տարբեր է $\nuynakan_\Z$ նույնական արտապատկերումից։
 \end{example}
 
 \par Ամեն մի փոխմիարժեք $f:X\rightarrow Y$ արտապատկերման համար սահմանվում է նրա \textbf{հակադարձ} $f^{-1}:Y\rightarrow X$  արտապատկերումը․ որպես $\forall y\in Y$ տարրի $f^{-1}(y)$ կերպար սահմանվում է $X$-ի այն $x$ տարրը, որ $f(x)=y$։
-\begin{example}
+\begin{example}\label{ch1ex9}
  Ցույց տանք, որ գոյություն ունի փոխմիարժեք արտապատկե-\linebreak րում $(-1,1)\rightarrow(-\infty,\infty)$։ Այն կարող է սահմանվել անալիտիկորեն՝ $f(t)=\tg \dfrac{\pi}{2} t$, \linebreak ${t \in (-1,1)}$ բանաձևով, կամ երկրաչափորեն՝ ստորև նկարագրվող եղանակով։ Գծա\-գրում $(-\infty,\infty)$ թվային ուղիղը պատկերված է որպես $OX$ կոորդինատային առանցք։ \linebreak
 \begin{center}
 \includegraphics[scale=0.6]{images/id 3.png}
@@ -364,7 +364,7 @@ f^{-1} \circ f=\nuynakan_X,\quad f\circ f^{-1}=\nuynakan_Y։
 \]
 Հետևաբար՝ $(h \circ g) \circ f=h \circ(g \circ f)$։
 
-\newpage % զուտ որովհետև էջի վերջում ա
+\newpage
 \input{Թեմա 1_Խնդիրներ}
 
 \end{document}

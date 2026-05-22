@@ -2,7 +2,14 @@
 
 % \setcounter{tocdepth}{2}
 
-\newcommand{\topic}[1]{\par \textbf{{Թեմա #1}} (էջ \pageref{sec:#1}) \nameref{sec:#1}}
+\newcommand{\topic}[1]{%
+  \par\addvspace{0.85ex}%
+  \hangindent=5.4em \hangafter=1%
+  \noindent
+  \makebox[5.4em][l]{\textbf{Թեմա~#1.}}%
+  \nameref{sec:#1}%
+  \nobreak\ \dotfill\ \pageref{sec:#1}%
+  \par}
 % \input{Lecture 1.tex}
 
 % \author{Հ․ Հ․ Օհնիկյան}

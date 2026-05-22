@@ -4,13 +4,6 @@
 \onehalfspacing
 
 
-% ISSUES:
-% - Տերմիններ․  
-% ներքին -> ներքնամաս, 
-% արտաքին -> արտաքնամաս, 
-% փակույթ -> փակում
-
-
 \section{Կետի դիրքը ենթաբազմության նկատմամբ․ ենթաբազմության ներքին և արտաքին կետեր, ենթաբազմության ներքինն ու արտաքինը, ենթաբազմության եզրային կետեր և ենթաբազմության եզր։ Փակման գործողություն բազմության վրա, Կուրատովսկու թեորեմը։}\label{sec:6}
 
 \par Հիշեցնենք, որ թվային ուղղի $X$ ենթաբազմության $x_0$ կետը կոչվում է նրա ներքին կետ, եթե գոյություն ունի այդ կետի որևէ $U(x_0, \varepsilon) = (x_0 - \varepsilon,\ x_0 + \varepsilon)$ $\varepsilon$-շրջակայք, որ $U(x_0, \varepsilon) \subset X$: Նույնպիսի հասկացություն, հետևյալ ընդհանուր տեսքով, ներմուծվում է բոլոր տոպոլոգիական տարածություններում։
@@ -32,7 +25,7 @@ $x \in X$ կետը կոչվում է $A$ \textbf{ենթաբազմության ն
     \item $A \mapsto \inter A$ համադրումը գործողություն է որոշված $X$-ի բոլոր ենթաբազմու\-թյուն\-ների բազմության վրա։ Մասնավորապես $ \inter\varnothing=\varnothing,\ \inter X=X$։ Այդ գործողությունը բնութագրում է $X$-ի բաց ենթաբազմությունները հետևյալ \linebreak իմաստով․ \textbf{$X$-ի որևէ ենթաբազմություն բաց ենթաբազմություն է այն և միայն այն դեպքում, երբ այն համընկնում է իր ներքինի հետ։} Իրոք, եթե $A$-ն բաց ենթաբազմություն է, ապա $A=\inter A$ ըստ ներքինի սահմանման։ Հակառակը՝ եթե $A= \inter A$, ապա $A$-ն բաց ենթաբազմություն է ըստ հատկու\-թյուն 1-ի։
 \end{enumerate}
 
-\begin{nexamples}
+\begin{nexamples}\label{ch6ex1}
 $(X, \textrm{դիսկր․})$ տարածությունում ցանկացած $A \subset X$ ենթաբազմու\-թյան ներքինը $A$-ն է։ Իսկ $(X, \textrm{անտիդ․})$-ում $\inter A=X$, երբ $A=X$, և $\inter A=\varnothing$, երբ $A \neq X$։ Այնուհետև, $(\R, \textrm{սովոր․})$ տարածությունում $(a,b),\ [a,b),\ (a,b],\ [a,b]$ ենթաբազմությունների ներքինները $(a,b)$-ն է, իսկ ամբողջ թվերի $\Z$, ռացիոնալ թվերի $\Q$, իռացիոնալ թվերի $\textrm{Ir}$ բազմությունների ներքինները $\varnothing$ բազմությունն է, $(\R, \textrm{հաշվ․ լր․})$ տարածությունում $\inter \Z= \inter \Q=\varnothing$, իսկ $\inter \textrm{Ir}=\textrm{Ir}$ (հիմնավորե՛ք)։
 \end{nexamples}
 
@@ -84,11 +77,11 @@ X = \inter A \cup \exter A \cup \partial A
 
 \par Այժմ $\partial A = X \setminus ({\inter A}  \cup {\exter A})$ նույնությունից հետևում է՝ $X$-ի ցանկացած ենթա\-բազմության եզրը փակ ենթաբազմություն է։
 
-\begin{example} \label{Օրինակ 1։}
+\begin{example}\label{ch6ex2} \label{Օրինակ 1։}
 Դիցուք $A$-ն հետևյալ $(0,1)$, $[0,1)$, $(0,1]$, $[0,1]$ ենթաբազմություն\-նե\-րից որևէ մեկն է թվային ուղղի սովորական տոպոլոգիայում։ Ապա $ \inter A = (0, 1)$, $\exter A = (-\infty, 0) \cup (1, +\infty)$, $ \partial A = \{0, 1\}$ (\textbf{հիմնավորե՛ք})։
 \end{example}
 
-\begin{example} \label{Օրինակ 2։}
+\begin{example}\label{ch6ex3} \label{Օրինակ 2։}
 Դիցուք $A$-ն նախորդ օրինակում բերված ենթաբազմություններից որևէ մեկն է թվային ուղղի աջից կիսաբաց ինտերվալների տոպոլոգիայում։ Դրան\-ցից $A = (0,1)$ դեպքում $\inter A = (0,1)$, $\exter A = (-\infty,0) \cup [1,+\infty)$, $ \partial A = \{0\}$, իսկ $A=[0,1]$ դեպքում  $\inter A = [0,1)$, $\exter A = (-\infty,0) \cup [1,+\infty)$, $\partial A = \varnothing $։
 
 Մյուս երկու դեպքերը որպես խնդիր թողնում ենք ընթերցողին։
@@ -114,7 +107,7 @@ $M\subset X$ ենթաբազմության բոլոր հպման կետերի բ�
 Անցումը $M$ ենթաբազմությունից $\widebar{M}$-ին, այսինքն $M\mapsto \widebar{M}$ համադրումը կոչվում է \textbf{փակման գոր\-ծո\-ղու\-թյուն տոպոլոգիական տարածությունում}։
 \end{definition}
 
-\begin{example}
+\begin{example}\label{ch6ex4}
     ա) $(X,\textrm{անտիդ․})$ տարածությունում $X$-ի ցանկացած $x$ կետ հպման կետ է ցանկացած $M\subset X,\ M\neq \varnothing$ ենթաբազմության համար, և ուրեմն $\widebar{M}=X$։
     
     \par բ) $(X,\textrm{դիսկր․})$-ում $M$ ենթաբազմության համար հպման կետեր են միայն և միայն $M$-ի կետերը։ Այսինքն՝ $\widebar{M} = M, \forall M\subset X$ ենթաբազմության դեպքում։
@@ -138,7 +131,7 @@ $M\subset X$ ենթաբազմության բոլոր հպման կետերի բ�
 Բերված ապացույցում մենք վերցրինք $x$ կետի ոչ թե կամայա\-կան $U$ շրջակայք, այլ կամայական $U$ \textbf{բաց} շրջակայք։ Առաջարկում ենք ընթերցողին նախ պարզել, թե ինչը ստիպեց այդպես վարվել, և ապա հիմնավորել, որ դրանով չի խախտվել ապացույցի լիարժեքությունը։
 \end{note}
 
-\begin{theorem}
+\begin{theorem}\label{ch6thm1}
 $X$ տոպ․ տարածության $M$ ենթաբազմությունը փակ ենթաբազմու\-թյուն է այն և միայն այն դեպքում, երբ $M$-ը պարունակում է իր բոլոր հպման կետերը։ 
 \end{theorem}
 
@@ -148,15 +141,15 @@ $X$ տոպ․ տարածության $M$ ենթաբազմությունը փակ
     \par բ) Եթե $\widebar{M} \subset M\ \Rightarrow\ (X \setminus M)$-ում $M$-ի հպման կետեր չկան $\Rightarrow \forall x \in X \setminus M$ կետ հպման կետ չէ $M$-ի համար $\Rightarrow \forall x \in X \setminus M$ կետի համար $\exists x$-ի $U_{x}$ (բաց) շրջակայք, որ $U_{x} \subset (X \setminus M)$։ Այսպիսով $(X \setminus M)$-ը շրջակայք է իր բոլոր կետերի համար $\Rightarrow (X \setminus M)$-ը բաց ենթաբազմություն է $\Rightarrow M$-ը փակ ենթաբազմություն է։
 \end{proof}
 
-\begin{hetevanq_counter} 
+\begin{hetevanq_counter}\label{ch6cor1} 
 $M \subset X$ ենթաբազմությունը փակ է այն և միայն այն դեպքում, երբ համընկնում է իր փակույթի հետ՝ $M = \widebar{M}$։
 \end{hetevanq_counter}
 
-\begin{hetevanq_counter} 
-Ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը $X$-ի փակ ենթաբազմություն է։ Իրոք, քանի որ $\widebar{\widebar{M}} = \widebar{M}$ ըստ հատկություն 4-ի, ուստի $\widebar{M}$-ը փակ ենթաբազմություն է համաձայն հետևանք 1-ի։
+\begin{hetevanq_counter}\label{ch6cor2} 
+Ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը $X$-ի փակ ենթաբազմություն է։ Իրոք, քանի որ $\widebar{\widebar{M}} = \widebar{M}$ ըստ հատկություն 4-ի, ուստի $\widebar{M}$-ը փակ ենթաբազմություն է համաձայն \hyperref[ch6cor1]{հետևանք 1}-ի։
 \end{hetevanq_counter}
 
-\begin{theorem} 
+\begin{theorem}\label{ch6thm2} 
 Ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը համընկնում է $M$-ը ընդգրկող բոլոր փակ ենթաբազմությունների հատման հետ։ Այսինքն ${\widebar{M} = \bigcap F}$, որտեղ հատումը կատարվում է ըստ այն բոլոր $F \subset X$ փակ ենթաբազմությունների, որ $M \subset F$։
 \end{theorem}
 
@@ -164,7 +157,7 @@ $M \subset X$ ենթաբազմությունը փակ է այն և միայն ա
 Մի կողմից՝ եթե $F$-ը փակ է և $M \subset F$, ապա $\widebar{M} \subset \widebar{F} = F$, ուստի $\widebar{M} \subset \bigcap F$։ Մյուս կողմից՝ քանի որ $M \subset \widebar{M}$ և $\widebar{M}$-ը փակ է, ուստի $F$ փակ ենթաբազմություններից մեկը $\widebar{M}$-ն է։ Հետևաբար $\bigcap F \subset \widebar{M}$, և ուրեմն $\widebar{M} = \bigcap F$։
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{ch6thm3}
 \label{թեորեմ 3}
 Ցանկացած $M, N \subset X$ ենթաբազմությունների դեպքում տեղի ունի
 $\widebar{M \cup N} = \widebar{M} \cup \widebar{N}$ համընկում։
@@ -202,7 +195,7 @@ M \subset M \cup N,\ N \subset M \cup N \ \Rightarrow\ \widebar{M} \subset \wide
 \par Ամեն մի այսպիսի գործողություն կոչվում է Կուրատովսկու \textbf{փակման գործո\-ղու\-թյուն բազմության վրա}։
 \end{definition}
 
-\begin{lemma}
+\begin{lemma}\label{ch6lem1}
 1-4 աքսիոմներից հետևում է՝ 
 \begin{itemize}
     \item[ա)] $\cl X = X$;
@@ -216,16 +209,16 @@ M \subset M \cup N,\ N \subset M \cup N \ \Rightarrow\ \widebar{M} \subset \wide
 \par բ) $A \subset B\ \Rightarrow\ (B = A \cup (B \setminus A))\ \Rightarrow\ (\cl B = \cl A \cup \cl(B \setminus A))\ \Rightarrow\ (\cl A \subset \cl B)$։
 \end{proof}
 
-\begin{theorem}[(K. Kuratowski, 1922)]
+\begin{theorem}[(K. Kuratowski, 1922)]\label{ch6thm4}
 $X$ բազմության վրա տրված Կուրատովսկու փակման գործողությունը որոշում է տոպոլոգիա $X$-ի վրա։ Ընդ որում՝ ցանկացած $M \subset X$ ենթաբազմության $\widebar{M}$ փակույթը այդ տոպոլոգիայում համընկնում է $\cl M$-ի հետ՝ $\widebar{M} = \cl M$։
 \end{theorem}
 
 \begin{proof} 
-Սահմանենք $\sigma$ տոպոլոգիա $X$ բազմության վրա՝ հիմնվելով փակ ենթաբազմությունների վրա (տե՛ս թեորեմ 3-ը թեմա 5-ում)։ $M \subset X$ ենթաբազմու\-թյունը համարելու ենք փակ $\sigma$ տոպոլոգիայում, եթե $M = \cl M$։ Այսպիսով 
+Սահմանենք $\sigma$ տոպոլոգիա $X$ բազմության վրա՝ հիմնվելով փակ ենթաբազմությունների վրա (տե՛ս \hyperref[ch5thm3]{թեորեմ 3}-ը թեմա 5-ում)։ $M \subset X$ ենթաբազմու\-թյունը համարելու ենք փակ $\sigma$ տոպոլոգիայում, եթե $M = \cl M$։ Այսպիսով 
 \[
 {M \in \sigma} \ \Leftrightarrow\ {M = \cl M}.
 \]
-Ստուգենք $\sigma$-ի համար տոպոլոգիայի 1*-3* աքսիոմները (տե՛ս թեորեմ 3-ը թեմա 5-ում)։ Դրանցից 1*-ը հետևում է K1-ից և լեմմայից։ Միավորման 2* աքսիոմը բավարարվում է շնորհիվ K4-ի։ Ստուգենք 3*-ը։ Դիցուք ունենք փակ ենթաբազմու\-թյունների որևէ $\left\{ M_i \subset X, i \in I \mid \cl M_i = M_i \right\}$ ընտանիք։ Ցույց տանք, որ նրանց \linebreak$F = \bigcap\limits_{i \in I} M_{i}$ հատումը պատկանում է $\sigma$-ին (դա համարժեք է նրան, որ ցույց տանք $\cl F = F$)։ Մի կողմից ունենք $F \subset \cl F$ ըստ K2-ի։ Մյուս կողմից՝ $F \subset M_i\ \Rightarrow\ (\cl F \subset \cl M_i )$, և քանի որ $\cl M_i = M_i$, ուստի $\cl F \subset \bigcap\limits_{i \in I} M_i = F$։ Այսպիսով $\cl F = F$, և ուրեմն $\sigma$-ն տոպոլոգիա է $X$ բազմության վրա։
+Ստուգենք $\sigma$-ի համար տոպոլոգիայի 1*-3* աքսիոմները (տե՛ս \hyperref[ch5thm3]{թեորեմ 3}-ը թեմա 5-ում)։ Դրանցից 1*-ը հետևում է K1-ից և լեմմայից։ Միավորման 2* աքսիոմը բավարարվում է շնորհիվ K4-ի։ Ստուգենք 3*-ը։ Դիցուք ունենք փակ ենթաբազմու\-թյունների որևէ $\left\{ M_i \subset X, i \in I \mid \cl M_i = M_i \right\}$ ընտանիք։ Ցույց տանք, որ նրանց \linebreak$F = \bigcap\limits_{i \in I} M_{i}$ հատումը պատկանում է $\sigma$-ին (դա համարժեք է նրան, որ ցույց տանք $\cl F = F$)։ Մի կողմից ունենք $F \subset \cl F$ ըստ K2-ի։ Մյուս կողմից՝ $F \subset M_i\ \Rightarrow\ (\cl F \subset \cl M_i )$, և քանի որ $\cl M_i = M_i$, ուստի $\cl F \subset \bigcap\limits_{i \in I} M_i = F$։ Այսպիսով $\cl F = F$, և ուրեմն $\sigma$-ն տոպոլոգիա է $X$ բազմության վրա։
 
 \par Այժմ ապացուցենք թեորեմի երկրորդ մասը․ ցույց տանք, որ $\forall M \subset X$ ենթա\-բազ\-մության համար $\widebar{M} = \cl M$։ Ըստ \hyperref[թեորեմ 3]{թեորեմ 3}-ի ունենք՝ $\widebar{M} = \bigcap F$, որտեղ հատումը տարվում է ըստ բոլոր այն $F \subset X$ ենթաբազմությունների, որ $\cl F = F$ և $M \subset F$։ Նրանից, որ $M \subset F \ \Rightarrow\ (\cl M \subset \cl F = F)\ \Rightarrow\ (\cl M \subset F)\ \Rightarrow\ (\cl M \subset \bigcap F = \widebar{M})$։ Մյուս կողմից՝ $M \subset \cl M\ \Rightarrow\ \widebar{M} \subset \widebar{\cl M}$։ Քանի որ $\cl(\cl M) = \cl M$ ըստ K3-ի, ուստի $\cl M \in \sigma$ ըստ $\tau$ տոպոլոգիայի սահմանման։ Քանի որ $\cl M$-ը փակ ենթաբազմություն է $\sigma$ տոպոլոգիայում, հետևաբար $\widebar{\cl M} = \cl M$, որից հետևում է, որ $\widebar{M} = \cl M$։
 \end{proof}
