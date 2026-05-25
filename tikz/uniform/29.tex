@@ -13,15 +13,17 @@
 %         \draw[thick] (0,0) -- (3,0);
 %         \draw[thick] (0,2) -- (3,2);
 %         \draw[thick] (3,0) -- (3,2);
-%         \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,0) -- (0,1);
-%         \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,0) -- (1.5,0);
-%         \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,2) -- (1.5,2);
-%         \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,0) -- (3,1);
+
         \draw[thick, fill=white] (0,0) rectangle (3,2);
+
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,0.5) -- (0,1.5);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,0) -- (1.5,0);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,2) -- (1.5,2);
+        \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,1.5) -- (3,0.5);
         \node[above left] (b) at (0,2) {$B$};
         \node[below left] (a) at (0,0) {$A$};
-        \node[above right] (c) at (3,2) {$C$};
-        \node[below right] (d) at (3,0) {$D$};
+        \node[above right] (c) at (3,2) {$A$};
+        \node[below right] (d) at (3,0) {$B$};
 
         \draw[thick] (0,0) -- (0,2);
         \draw[thick] (0,0) -- (3,0);
@@ -29,9 +31,9 @@
         \draw[thick] (3,0) -- (3,2);
         
         \node[circle, fill=blue!90, inner sep=1.5pt, label={[label distance=-1.5pt]left:$E$}] (e) at (0,0.6) {};
-        \node[circle, fill=blue!90, inner sep=1.5pt] (e2) at (3,2-0.6) {};
+        \node[circle, fill=blue!90, inner sep=1.5pt, label={[label distance=-1.5pt]right:$E$}] (e2) at (3,2-0.6) {};
         \node[circle, fill=red!90, inner sep=1.5pt, label={[label distance=-1.5pt]above:$F$}] (f) at (0.6,2) {};
-        \node[circle, fill=red!90, inner sep=1.5pt] (f2) at (3-0.6,0) {};
+        \node[circle, fill=red!90, inner sep=1.5pt, label={[label distance=-1.5pt]above:$F$}] (f2) at (3-0.6,0) {};
         % \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (0,0.6) -- (0,1.4);
         % \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (3,2-0.6) -- (3,2-1.4);
         % \draw[-{Stealth[length=2.5mm, width=2.5mm]}] (1.0,2) -- (1.8,2);
