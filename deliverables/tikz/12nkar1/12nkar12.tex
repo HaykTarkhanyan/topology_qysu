@@ -1,0 +1,44 @@
+\begin{tikzpicture}
+    \def\x{4}
+    \def\tick{0.25}
+    \def\vx{0.2}
+    \def\vy{0.3}
+
+% 2-րդ գծագիրն ա
+    \begin{scope}[xshift=6cm, yshift=0.3cm]
+    \draw[white] (0,0) -- (0,0.5);
+    \end{scope}
+    \begin{scope}[xshift=6cm]
+    \draw (-1,0) -- (\x+3,0);
+    \node (lpakagic) at (0.9*\x,0) {$)$};
+    \node[below=3pt] at (lpakagic) {$\beta$};
+    \node (rpakagic) at (0.5*\x,0) {$($};
+    \node[below=3pt] at (rpakagic) {$\alpha$};
+    \node (left) at (0.4*\x, 0) {$[$};
+    \node[below=3pt] at (left) {$a$};
+    \node (right) at (\x, 0) {$]$};
+    \node[below=3pt] at (right) {$b$};
+    % blues
+    \draw[blue] (0.5*\x, 0) -- (0.5*\x+\vx,\vy);
+    \draw[blue] (0.55*\x, 0) -- (0.55*\x+\vx,\vy);
+    \draw[blue] (0.6*\x, 0) -- (0.6*\x+\vx,\vy);
+    \draw[blue] (0.65*\x, 0) -- (0.65*\x+\vx,\vy);
+    \draw[blue] (0.75*\x, 0) -- (0.75*\x+\vx,\vy);
+    \draw[blue] (0.7*\x, 0) -- (0.7*\x+\vx,\vy);
+    \draw[blue] (0.8*\x, 0) -- (0.8*\x+\vx,\vy);
+    \draw[blue] (0.85*\x, 0) -- (0.85*\x+\vx,\vy);
+    % reds
+    \draw[red] (\x,0) -- (\x-\vx, \vy);
+    \draw[red] (0.95*\x,0) -- (0.95*\x-\vx, \vy);
+    \draw[red] (0.9*\x,0) -- (0.9*\x-\vx, \vy);
+    \draw[red] (0.85*\x,0) -- (0.85*\x-\vx, \vy);
+    \draw[red] (0.8*\x,0) -- (0.8*\x-\vx, \vy);
+    \draw[red] (0.75*\x,0) -- (0.75*\x-\vx, \vy);
+    \draw[red] (0.7*\x,0) -- (0.7*\x-\vx, \vy);
+    \draw[red] (0.65*\x,0) -- (0.65*\x-\vx, \vy);
+    \draw[red] (0.6*\x,0) -- (0.6*\x-\vx, \vy);
+    \draw[red] (0.55*\x,0) -- (0.55*\x-\vx, \vy);
+    \draw[red] (0.5*\x,0) -- (0.5*\x-\vx, \vy);
+    \draw[red] (0.45*\x,0) -- (0.45*\x-\vx, \vy);
+    \end{scope}
+    \end{tikzpicture}

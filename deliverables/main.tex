@@ -1,0 +1,88 @@
+\input{packages}
+
+% \setcounter{tocdepth}{2}
+
+\newcommand{\topic}[1]{%
+\par\addvspace{0.85ex}%
+\noindent
+\hangindent=5.4em \hangafter=1%
+\makebox[5.4em][l]{\textbf{Թեմա~#1.}}%
+\parbox[t]{\dimexpr\textwidth-5.4em\relax}{%
+\nameref{sec:#1}\nobreak\dotfill\nobreak\pageref{sec:#1}%
+}%
+\par}
+
+% \author{Հ․ Հ․ Օհնիկյան}
+% \title{Տոպոլոգիա}
+% % \date{Երևան 2022}
+% \date{Երևան 2024}
+
+\nocite{*} % տեսնում է գրականության ամբողջ ցանկը
+
+\begin{document}
+
+% \maketitle
+\newpage
+% \tableofcontents
+
+
+\section*{Բովանդակություն}
+% \topic{0}
+\topic{1}
+\topic{2}
+\topic{3}
+ \topic{4}
+ \topic{5}
+ \topic{6}
+ \topic{7}
+ \topic{8}
+ \topic{9}
+ \topic{10}
+ \topic{11}
+ \topic{12}
+ \topic{13}
+ \topic{14}
+ \topic{15}
+ \topic{16}
+\newpage
+% \setcounter{section}{-1}
+% \subfile{Թեմա 0}
+% \newpage
+\subfile{Թեմա 1}
+\newpage
+\subfile{Թեմա 2}
+\newpage
+\subfile{Թեմա 3}
+\newpage
+ \subfile{Թեմա 4}
+ \newpage
+ \subfile{Թեմա 5}
+ \newpage
+ \subfile{Թեմա 6}
+ \newpage
+ \subfile{Թեմա 7}
+ \newpage
+ \subfile{Թեմա 8}
+ \newpage
+ \subfile{Թեմա 9}
+ \newpage
+ \subfile{Թեմա 10}
+ \newpage
+ \subfile{Թեմա 11}
+ \newpage
+ \subfile{Թեմա 12}
+ \newpage
+ \subfile{Թեմա 13}
+ \newpage
+ \subfile{Թեմա 14}
+ \newpage
+ \subfile{Թեմա 15}
+ \newpage
+ \subfile{Թեմա 16}
+
+ \newpage
+ \subsection*{Գրականություն դասընթացի վերաբերյալ}
+ \printbibliography[notkeyword={top},title={Բազմությունների տեսություն}, sorting=none]
+ \printbibliography[keyword={top},title={Ընդհանուր տոպոլոգիա}, sorting=none]
+
+\end{document}

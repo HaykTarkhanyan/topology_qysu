@@ -1,0 +1,52 @@
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+    \begin{tikzpicture}[use Hobby shortcut]
+        \coordinate (center) at (0,0);
+        \def\radius{1.75}
+        \foreach \i in {1,...,9}
+        {
+            \node at ($ (center) + (40*\i-40:\radius*1.2) $) {$x_\i$};
+            \fill ($ (center) + (40*\i:\radius) $) circle (2.5pt);
+        };
+        \draw (0,0) circle (1.75);
+        \fill[white] (0,-2.8) circle (2.5pt);
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+    \begin{tikzpicture}[use Hobby shortcut]
+        \path[spath/save=figure8]
+        (0,2) .. controls +(2.2,0) and +(120:-2.2) ..
+        (210:2) .. controls +(120:2.2) and +(60:2.2) ..
+        (-30:2) .. controls +(60:-2.2) and +(-2.2,0) .. (0,2);
+        \tikzset{
+            spath component/.style={
+                draw,
+                postaction={decorate},
+                decoration={
+                    markings,
+                    mark=at position 0.45 with {\fill (0,0) circle[radius=2.5pt];},
+                    mark=at position 0.45 with {
+                        \path (0,0) +(0,2ex) node {\(y_\inteval{\inteval{#1 * 3} - 2}\)};
+                    },
+                    mark=at position 0.80 with {\fill (0,0) circle[radius=2.5pt];},
+                    mark=at position 0.80 with {
+                        \path (0,0) +(0,2ex) node {\(y_\inteval{\inteval{#1 * 3} - 1}\)};
+                    },
+                    mark=at position 21 with {\fill (0,0) circle[radius=2.5pt];},
+                    mark=at position 21 with {
+                        \path (0,0) +(0,2ex) node {\(y_\inteval{\inteval{#1 * 3} - 1}\)};
+                    },
+                }
+            },
+            spath/knot={figure8}{15pt}{1,3,5}
+        }
+        \path (0,-.7);
+        \fill (0,0.43) circle[radius=2.5pt];
+        \node[above] at (0,0.43) {$y_3$};
+        \fill (0.38,-0.17) circle[radius=2.5pt];
+        \node[right] at (0.38,-0.17) {$y_9$};
+        \fill (-0.38,-0.17) circle[radius=2.5pt];
+        \node[left] at (-0.38,-0.17) {$y_6$};
+    \end{tikzpicture}
+\end{minipage}
+\end{center}

@@ -1,0 +1,90 @@
+\usetikzlibrary{arrows.meta,calc,shadings,fadings}
+
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+
+% ----------------------------
+% PARAMETERS
+% ----------------------------
+\def\a{2.2}       % ellipse x radius
+\def\b{0.65}      % ellipse y radius
+\def\H{2.2}       % hemisphere height
+\def\Oy{-2.0}     % ground level y
+
+\coordinate (O) at (0,\Oy);
+\coordinate (Top) at (0,{\Oy+\H});   % equator center (flat top)
+
+% ----------------------------
+% ANGLES for labeled points
+% ----------------------------
+\def\phiA{25}     % azimuthal angle for A pair
+\def\phiB{120}    % azimuthal angle for B pair
+
+% ----------------------------
+% SOUTHERN HEMISPHERE (dome down, equator on top)
+% ----------------------------
+
+% Silhouette meridians (one continuous path, no gap at bottom)
+\draw
+  plot[domain=0:1, samples=80, smooth]
+  ({-\a*sqrt(1 - \x*\x)}, {\Oy + \H - \H*\x})
+  -- plot[domain=1:0, samples=80, smooth]
+  ({\a*sqrt(1 - \x*\x)}, {\Oy + \H - \H*\x});
+
+% Fill with path fading
+\fill[blue!25, path fading=north]
+  plot[domain=0:1, samples=80, smooth]
+  ({-\a*sqrt(1 - \x*\x)}, {\Oy + \H - \H*\x})
+  -- (0, \Oy)
+  -- plot[domain=1:0, samples=80, smooth]
+  ({\a*sqrt(1 - \x*\x)}, {\Oy + \H - \H*\x})
+  -- plot[domain=0:360, samples=80, smooth]
+  ({\a*cos(\x)}, {\Oy + \H + \b*sin(\x)})
+  -- cycle;
+
+% Equator ellipse
+\draw
+  plot[domain=0:360, samples=80, smooth]
+  ({\a*cos(\x)}, {\Oy + \H + \b*sin(\x)});
+
+% ----------------------------
+% POINTS ON EQUATOR
+% ----------------------------
+
+% A pair
+\coordinate (eqA)  at ({\a*cos(\phiA)}, {\Oy+\H+\b*sin(\phiA)});
+\coordinate (eqA2) at ({-\a*cos(\phiA)}, {\Oy+\H-\b*sin(\phiA)});
+
+% B pair
+\coordinate (eqB)  at ({\a*cos(\phiB)}, {\Oy+\H+\b*sin(\phiB)});
+\coordinate (eqB2) at ({-\a*cos(\phiB)}, {\Oy+\H-\b*sin(\phiB)});
+
+% Dashed lines: diametrically opposite on equator
+\draw[densely dashed, black!60] (eqA) -- (eqA2);
+\draw[densely dashed, black!60] (eqB) -- (eqB2);
+
+% ----------------------------
+% POINT C ON HEMISPHERE SURFACE
+% ----------------------------
+\pgfmathsetmacro{\tC}{0.55}       % t parameter (0=equator, 1=south pole)
+\pgfmathsetmacro{\phiC}{-120}     % azimuthal angle
+\coordinate (C) at
+  ({\a*sqrt(1-\tC*\tC)*cos(\phiC)},
+   {\Oy + \H - \H*\tC + \b*sqrt(1-\tC*\tC)*sin(\phiC)});
+
+\fill (C) circle (1.3pt);
+\node[right=1pt] at (C) {$C$};
+
+% ----------------------------
+% LABELS
+% ----------------------------
+\fill (eqA) circle (1.3pt);
+\node[above=3pt] at (eqA) {$A$};
+\fill (eqA2) circle (1.3pt);
+\node[left=3pt] at (eqA2) {$A$};
+
+\fill (eqB) circle (1.3pt);
+\node[above=3pt] at (eqB) {$B$};
+\fill (eqB2) circle (1.3pt);
+\node[below right=-0.9pt] at (eqB2) {$B$};
+
+\end{tikzpicture}
